@@ -35,14 +35,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className="sidebar">
-            <nav className="sidebar-nav">
-              <ul className="nav" style={{
-                position: "fixed",
-                top: "0px",
-                bottom: "0px",
-                left: "0px"
-                }}>
+          <div className="navbar">
+              <ul className="nav">
                 <li className="nav-title" style={{ fontSize: "45px", justifyItems:"space-around"}}>breaddit</li>
                 <li className="nav-item">
                   <a className="nav-link" href="/">
@@ -52,11 +46,9 @@ class App extends Component {
                 <li className="nav-item">
                   <a className="nav-link" href="/create">
                     <i className="nav-icon cui-speedometer"></i>New Toast
-          <span className="badge badge-primary">NEW</span>
                   </a>
                 </li>
               </ul>
-            </nav>
           </div>
         </header>
         <Route
