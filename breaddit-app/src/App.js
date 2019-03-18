@@ -4,7 +4,7 @@ import Post from './Components/Post';
 import HomePage from './Components/Homepage';
 import NewPost from './Components/NewPost';
 import './App.css';
-import {Navbar, Nav} from 'react-bootstrap'
+import {Nav} from 'react-bootstrap'
 
 
 
@@ -22,9 +22,7 @@ state and shit goes here
           <br />
           <Nav.Link href="/create">CREATE A NEW TOAST</Nav.Link>
             <br />
-            <Nav.Link href="/about">About Us</Nav.Link>
-            <br />
-            <Nav.Link href="/contact">Contact</Nav.Link>
+ 
 
         </Nav>
         </div>
@@ -32,6 +30,7 @@ state and shit goes here
         <Route path="/" exact component={HomePage} />
         <Route path="/post/:name" component={Post}/>
         <Route path="/create" component={NewPost}/>
+     
         </div>
       </div>
     );
