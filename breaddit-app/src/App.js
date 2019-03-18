@@ -12,9 +12,18 @@ class App extends Component {
       title: "title",
       content: "content"
     };
+    this.fromForm = this.fromForm.bind(this);
+    this.submission = this.submission.bind(this);
   }
   getData() {
     //fetch data goes here
+  }
+  fromForm(event) {
+    this.setState({ title: event.target.title });
+  }
+  submission(event) {
+    alert("your post is called " + this.state.title);
+    event.preventDefault();
   }
 
   render() {
@@ -31,8 +40,18 @@ class App extends Component {
             <HomePage title={this.state.title} content={this.state.content} />
           )}
         />
-        <Route path="/post/:name" component={Post} />
-        <Route path="/create" component={NewPost} />
+        <Route
+          path="/post/:name"
+          render={props => (
+            <Post title={this.state.title} content={this.state.content} />
+          )}
+        />
+        <Route
+          path="/create"
+          render={props => (
+            <NewPost fromForm={this.fromForm} submission={this.submission} />
+          )}
+        />
       </div>
     );
   }

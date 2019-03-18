@@ -6,8 +6,7 @@ class Homepage extends Component {
     return (
       <div>
         <h3>{this.props.title}</h3>
-        <p>{this.props.content}</p>
-        {/* <p> home page yall! </p> */}
+        {/* look up how to put post previews */}
       </div>
     );
   }
