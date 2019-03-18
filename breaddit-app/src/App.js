@@ -12,22 +12,22 @@ class App extends Component {
       title: " ",
       content: " "
     };
-    this.fromForm = this.fromForm.bind(this);
+    this.titleSet = this.titleSet.bind(this);
     this.submission = this.submission.bind(this);
-    this.fromFormCont = this.fromFormCont.bind(this);
+    this.contentSet = this.contentSet.bind(this);
   }
   getData() {
     //fetch data goes here
   }
-  fromForm(event) {
+  titleSet(event) {
     this.setState({ title: event.target.value });
   }
-  fromFormCont(event) {
+  contentSet(event) {
     this.setState({ content: event.target.value });
   }
   submission(event) {
-    alert("your post is called " + this.state.title);
-    alert("This is your post! " + this.state.content);
+    console.log("your post is called " + this.state.title);
+    console.log("This is your post! " + this.state.content);
     event.preventDefault();
   }
 
@@ -55,8 +55,8 @@ class App extends Component {
           path="/create"
           render={props => (
             <NewPost
-              fromForm={this.fromForm}
-              fromFormCont={this.fromFormCont}
+              titleSet={this.titleSet}
+              contentSet={this.contentSet}
               submission={this.submission}
               title={this.state.title}
               content={this.state.content}
