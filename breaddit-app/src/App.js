@@ -42,7 +42,7 @@ class App extends Component {
                   <a href="/">The Bakery</a>
                 </li>
                 <li>
-                  <a href="/create">Create New Toast</a>
+                  <a href="/create">Make Some Toast</a>
                 </li>
               </ul>
             </div>
