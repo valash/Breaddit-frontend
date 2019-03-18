@@ -13,6 +13,9 @@ class App extends Component {
       content: "content"
     };
   }
+  getData() {
+    //fetch data goes here
+  }
 
   render() {
     return (
@@ -21,7 +24,13 @@ class App extends Component {
           <h1>Breaddit</h1>
           <h2>WELCOME Bread LOVERS</h2>
         </header>
-        <Route path="/" exact component={HomePage} />
+        <Route
+          path="/"
+          exact
+          render={props => (
+            <HomePage title={this.state.title} content={this.state.content} />
+          )}
+        />
         <Route path="/post/:name" component={Post} />
         <Route path="/create" component={NewPost} />
       </div>
