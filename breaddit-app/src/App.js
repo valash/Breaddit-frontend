@@ -35,25 +35,29 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div class="sidebar">
-            <nav class="sidebar-nav">
-              <ul class="nav" style={{
-                position: "fixed",
-                top: "0px",
-                bottom: "0px",
-                left: "0px",
-                backgroundColor:"grey"
-                }}>
-                <li class="nav-title">breaddit</li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/">
-                    <i class="nav-icon cui-speedometer"></i> Home
-        </a>
+          <div className="sidebar">
+            <nav className="sidebar-nav">
+              <ul
+                className="nav"
+                style={{
+                  position: "fixed",
+                  top: "0px",
+                  bottom: "0px",
+                  left: "0px",
+                  backgroundColor: "grey"
+                }}
+              >
+                <li className="nav-title">breaddit</li>
+                <li className="nav-item">
+                  <a className="nav-link" href="/">
+                    <i className="nav-icon cui-speedometer" /> Home
+                  </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/create">
-                    <i class="nav-icon cui-speedometer"></i>New Toast
-          <span class="badge badge-primary">NEW</span>
+                <li className="nav-item">
+                  <a className="nav-link" href="/create">
+                    <i className="nav-icon cui-speedometer" />
+                    New Toast
+                    <span className="badge badge-primary">NEW</span>
                   </a>
                 </li>
               </ul>
