@@ -22,10 +22,12 @@ there will be code snippets here later
 
 - User Authentication
 - Limiting User activity based on whether or not they're logged in
+  -Up/Down votes
 
 ### Gold
 
 - Implementing Redux
+  -Up/Down votes change display order
 
 ## Technologies Used:
 
