@@ -3,11 +3,22 @@ import React, { Component } from "react";
 class NewPost extends Component {
   render() {
     return (
-        <form className="NewPost" onSubmit={this.props.fromForm}>
-        <input class="form-control form-control-lg" type="text" className="postTitle" placeholder= "title" onChangeCapture={this.props.fromForm} />
-          <textarea class="form-control form-control-lg" cols="70" rows="25" placeholder="We're BREAD-y for your message" onChangeCapture={this.props.fromFormCont}/>
-          <input type="submit" value="Submit" onClick={this.props.submission} />
+      <div>
+        <form className="NewPost" onSubmit={this.props.submission}>
+          <input
+            type="text"
+            className="postTitle"
+            onChange={this.props.titleSet}
+          />
+          <textarea
+            cols="70"
+            rows="25"
+            placeholder="We're BREAD-y for your message"
+            onChange={this.props.contentSet}
+          />
+          <input type="submit" value="Submit" />
         </form>
+        </div>
     );
   }
 }
