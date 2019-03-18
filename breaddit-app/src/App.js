@@ -35,17 +35,36 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-            <div class="navbar">
-              <a class="navbar-brand" href="/"><h1>Breaddit</h1></a>
-              <ul class="nav navbar-nav">
-                <li class="active">
-                  <a href="/">The Bakery</a>
+          <div class="sidebar">
+            <nav class="sidebar-nav">
+              <ul class="nav" style={{
+                position: "fixed",
+                top: "0px",
+                bottom: "0px",
+                left: "0px",
+                backgroundColor:"grey"
+                }}>
+                <li class="nav-title">breaddit</li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/">
+                    <i class="nav-icon cui-speedometer"></i> Home
+        </a>
                 </li>
-                <li>
-                  <a href="/create">Make Some Toast</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="/">
+                    <i class="nav-icon cui-speedometer"></i>New Toast
+          <span class="badge badge-primary">NEW</span>
+                  </a>
+                </li>
+                <li class="nav-item nav-dropdown">
+                  <a class="nav-link nav-dropdown-toggle" href="/">
+                    <i class="nav-icon cui-puzzle"></i> Nav dropdown
+        </a>
                 </li>
               </ul>
-            </div>
+            </nav>
+            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
+          </div>
         </header>
         <Route
           path="/"
