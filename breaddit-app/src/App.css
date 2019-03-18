@@ -2,24 +2,31 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
 
 .App-header {
-  background-color: #282c34;
-  height: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
+  background-color: rgb(131, 156, 207);
+  height: 100pc;
+  display: block;
+  float: left;
+  font-size: 20px;
   color: white;
+  width: 110px;
+}
+
+.Nav.Link {
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  height: 100%;
+  position: fixed; 
+  overflow: auto; 
 }
 
 .App-link {
   color: #61dafb;
 }
 
+a:-webkit-any-link {
+  text-decoration: none;
+}

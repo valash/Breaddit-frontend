@@ -4,7 +4,7 @@ import Post from './Components/Post';
 import HomePage from './Components/Homepage';
 import NewPost from './Components/NewPost';
 import './App.css';
-import {Navbar, NavDropdown, Nav} from 'react-bootstrap'
+import {Navbar, Nav} from 'react-bootstrap'
 
 
 
@@ -16,23 +16,23 @@ state and shit goes here
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-            <Navbar.Brand href="/">BREADDIT</Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-            <Navbar.Collapse id="responsive-navbar-nav">
-              <Nav className="mr-auto">
-                <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
-                  <NavDropdown.Item href="/">Home</NavDropdown.Item>
-                  <NavDropdown.Item href="/create" >New Post</NavDropdown.Item>
-                </NavDropdown>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
-        </header>
+        <div className="App-header">
+        <Nav defaultActiveKey="/home" className="flex-column">
+          <Nav.Link href="/home">BREADDIT</Nav.Link>
+          <br />
+          <Nav.Link href="/create">CREATE A NEW TOAST</Nav.Link>
+            <br />
+            <Nav.Link href="/about">About Us</Nav.Link>
+            <br />
+            <Nav.Link href="/contact">Contact</Nav.Link>
+
+        </Nav>
+        </div>
+        <div className="Routes">
         <Route path="/" exact component={HomePage} />
         <Route path="/post/:name" component={Post}/>
         <Route path="/create" component={NewPost}/>
+        </div>
       </div>
     );
   }
