@@ -14,6 +14,7 @@ class App extends Component {
     };
     this.fromForm = this.fromForm.bind(this);
     this.submission = this.submission.bind(this);
+    this.fromFormCont = this.fromFormCont.bind(this);
   }
   getData() {
     //fetch data goes here
@@ -21,8 +22,12 @@ class App extends Component {
   fromForm(event) {
     this.setState({ title: event.target.value });
   }
+  fromFormCont(event) {
+    this.setState({ content: event.target.value });
+  }
   submission(event) {
     alert("your post is called " + this.state.title);
+    alert("This is your post! " + this.state.content);
     event.preventDefault();
   }
 
@@ -51,6 +56,7 @@ class App extends Component {
           render={props => (
             <NewPost
               fromForm={this.fromForm}
+              fromFormCont={this.fromFormCont}
               submission={this.submission}
               title={this.state.title}
               content={this.state.content}
