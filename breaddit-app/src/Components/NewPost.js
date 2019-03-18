@@ -4,19 +4,18 @@ class NewPost extends Component {
   render() {
     return (
       <div>
-        <form className="NewPost" onSubmit={this.fromForm}>
+        <form className="NewPost" onSubmit={this.props.fromForm}>
           <input
             type="text"
             className="postTitle"
-            value={this.props.title}
-            onChange={this.submission}
+            onChangeCapture={this.props.fromForm}
           />
           <textarea
             cols="70"
             rows="25"
             placeholder="We're BREAD-y for your message"
           />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" onClick={this.props.submission} />
         </form>
       </div>
     );

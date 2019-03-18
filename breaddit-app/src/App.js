@@ -9,8 +9,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "title",
-      content: "content"
+      title: " ",
+      content: " "
     };
     this.fromForm = this.fromForm.bind(this);
     this.submission = this.submission.bind(this);
@@ -19,7 +19,7 @@ class App extends Component {
     //fetch data goes here
   }
   fromForm(event) {
-    this.setState({ title: event.target.title });
+    this.setState({ title: event.target.value });
   }
   submission(event) {
     alert("your post is called " + this.state.title);
@@ -49,7 +49,12 @@ class App extends Component {
         <Route
           path="/create"
           render={props => (
-            <NewPost fromForm={this.fromForm} submission={this.submission} />
+            <NewPost
+              fromForm={this.fromForm}
+              submission={this.submission}
+              title={this.state.title}
+              content={this.state.content}
+            />
           )}
         />
       </div>
