@@ -3,6 +3,7 @@ import { Route } from "react-router-dom"
 import './App.css';
 import Post from './Components/Post';
 import HomePage from './Components/Homepage';
+import NewPost from './Components/NewPost';
 
 
 class App extends Component {
@@ -16,9 +17,9 @@ state and shit goes here
           <h1>Breaddit</h1>
           <h2>WELCOME Bread LOVERS</h2>
         </header>
-        <Route path="/" exact render={HomePage} />
-        <Route path="/bird/:name" render={Post}/>
-        <Route path="/create" render={Post}/>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/post/:name" component={Post}/>
+        <Route path="/create" component={NewPost}/>
       </div>
     );
   }
