@@ -51,19 +51,13 @@ class App extends Component {
         </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="/">
+                  <a class="nav-link" href="/create">
                     <i class="nav-icon cui-speedometer"></i>New Toast
           <span class="badge badge-primary">NEW</span>
                   </a>
                 </li>
-                <li class="nav-item nav-dropdown">
-                  <a class="nav-link nav-dropdown-toggle" href="/">
-                    <i class="nav-icon cui-puzzle"></i> Nav dropdown
-        </a>
-                </li>
               </ul>
             </nav>
-            <button class="sidebar-minimizer brand-minimizer" type="button"></button>
           </div>
         </header>
         <Route
