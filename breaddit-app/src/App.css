@@ -1,17 +1,26 @@
+*{
+  text-decoration: none;
+    font-family:'Source Code Pro:900', monospace;
+
+}
+
 .App {
   text-align: center;
-  background-image: url("./images/cut-bread.jpg");
 }
+
+  a:link, a:visited, a:hover, a:active { color:white;
+       text-decoration: none;
+     }
 
 
 .App-header {
-  background-color: rgb(131, 156, 207);
+  background-color: rgb(134, 135, 143);
   height: 100pc;
   display: block;
   float: left;
-  font-size: 20px;
+  font-size: 25px;
   color: white;
-  width: 110px;
+  text-align: start;
 }
 
 .Nav.Link {
@@ -21,7 +30,8 @@
   background-color: #f1f1f1;
   height: 100%;
   position: fixed; 
-  overflow: auto; 
+  overflow: auto;
+  color: #fb3f00; 
 }
 
 .App-link {

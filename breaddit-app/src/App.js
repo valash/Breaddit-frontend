@@ -15,16 +15,19 @@ state and shit goes here
   */
   render() {
     return (
-      <div className="App">
+      <div className="App" >
         <div className="App-header">
-        <Nav defaultActiveKey="/home" className="flex-column">
-          <Nav.Link href="/home">BREADDIT</Nav.Link>
-          <br />
-          <Nav.Link href="/create">CREATE A NEW TOAST</Nav.Link>
-            <br />
- 
-
-        </Nav>
+          <div class="navbar">
+            <a class="navbar-brand" href="/">BREADDIT</a>
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/create">Create New Toast</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div className="Routes">
         <Route path="/" exact component={HomePage} />
