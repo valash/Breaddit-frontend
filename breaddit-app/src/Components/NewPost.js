@@ -1,18 +1,19 @@
 import React, { Component } from "react";
+import "./NewPost.css";
 
 class NewPost extends Component {
   render() {
     return (
       <div>
-        <form className="NewPost" onSubmit={this.props.submission}>
+        <form className="NewPost" onSubmit={this.props.submission} style={{marginLeft:"50%", marginRight:"50%"}}>
           <input
             type="text"
+            placeholder="title"
             className="postTitle"
             onChange={this.props.titleSet}
           />
           <textarea
-            cols="70"
-            rows="25"
+            rows="14"
             placeholder="We're BREAD-y for your message"
             onChange={this.props.contentSet}
           />
