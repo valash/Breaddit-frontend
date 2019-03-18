@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import { Route } from "react-router-dom"
-import './App.css';
 import Post from './Components/Post';
 import HomePage from './Components/Homepage';
 import NewPost from './Components/NewPost';
+import './App.css';
+import {Navbar, NavDropdown, Nav} from 'react-bootstrap'
+
+
 
 
 class App extends Component {
@@ -14,8 +17,18 @@ state and shit goes here
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Breaddit</h1>
-          <h2>WELCOME Bread LOVERS</h2>
+          <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar.Brand href="/">BREADDIT</Navbar.Brand>
+            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Collapse id="responsive-navbar-nav">
+              <Nav className="mr-auto">
+                <NavDropdown title="Dropdown" id="collapsible-nav-dropdown">
+                  <NavDropdown.Item href="/">Home</NavDropdown.Item>
+                  <NavDropdown.Item href="/create" >New Post</NavDropdown.Item>
+                </NavDropdown>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
         </header>
         <Route path="/" exact component={HomePage} />
         <Route path="/post/:name" component={Post}/>
