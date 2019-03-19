@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Post from "./Components/Post";
 import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
+import SignUp from "./Components/SignUp";
+import logIn from "./Components/logIn";
 
 class App extends Component {
   constructor(props) {
@@ -55,14 +57,14 @@ class App extends Component {
               </ul>
               <ul className="nav navbar-nav navbar-right">
                 <li>
-                  <a href="/signup">
+                  <Link to="/signup">
                     <span className="glyphicon glyphicon-user" /> Sign Up
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/login">
+                  <Link to="/login">
                     <span className="glyphicon glyphicon-log-in" /> Login
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -75,6 +77,8 @@ class App extends Component {
             <HomePage title={this.state.title} content={this.state.content} />
           )}
         />
+        <Route path="/login" component={logIn} />
+        <Route path="/signup" component={SignUp} />
         <Route
           path="/post/:name"
           render={props => (
