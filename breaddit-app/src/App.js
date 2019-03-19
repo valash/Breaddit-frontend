@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Post from "./Components/Post";
 import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
+import SignUp from "./Components/SignUp";
+import logIn from "./Components/logIn";
 
 class App extends Component {
   constructor(props) {
@@ -38,16 +40,32 @@ class App extends Component {
           <nav className="navbar-default">
             <div className="container-fluid">
               <div className="navbar-header">
-                <a className="navbar-brand" href="/">Breaddit</a>
+                <a className="navbar-brand" href="/">
+                  Breaddit
+                </a>
               </div>
               <ul className="nav navbar-nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/create">New Toast</a></li>
-                <li><a href="/">About</a></li>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/create">New Toast</a>
+                </li>
+                <li>
+                  <a href="/">About</a>
+                </li>
               </ul>
               <ul className="nav navbar-nav navbar-right">
-                <li><a href="/signup"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li><a href="/login"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li>
+                  <Link to="/signup">
+                    <span className="glyphicon glyphicon-user" /> Sign Up
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/login">
+                    <span className="glyphicon glyphicon-log-in" /> Login
+                  </Link>
+                </li>
               </ul>
             </div>
           </nav>
@@ -59,6 +77,8 @@ class App extends Component {
             <HomePage title={this.state.title} content={this.state.content} />
           )}
         />
+        <Route path="/login" component={logIn} />
+        <Route path="/signup" component={SignUp} />
         <Route
           path="/post/:name"
           render={props => (
