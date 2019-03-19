@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 class NewPost extends Component {
+  //   componentDidUpdate() {
+  //     console.log("The button was clicked!");
+  //   }
   render() {
     return (
       <div>
@@ -16,12 +19,11 @@ class NewPost extends Component {
             placeholder="We're BREAD-y for your message"
             onChange={this.props.contentSet}
           />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" onClick />
         </form>
-        </div>
+      </div>
     );
   }
 }
-
 
 export default NewPost;

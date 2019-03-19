@@ -16,6 +16,12 @@ class App extends Component {
     this.submission = this.submission.bind(this);
     this.contentSet = this.contentSet.bind(this);
   }
+  signIn(event) {
+    event.preventDefault();
+    //axios
+    // email: this.state.email;
+    // password: this.state.password;
+  }
   getData() {
     //fetch data goes here
   }
@@ -68,7 +74,11 @@ class App extends Component {
           path="/"
           exact
           render={props => (
-            <HomePage title={this.state.title} content={this.state.content} />
+            <HomePage
+              {...props}
+              title={this.state.title}
+              content={this.state.content}
+            />
           )}
         />
         <Route
