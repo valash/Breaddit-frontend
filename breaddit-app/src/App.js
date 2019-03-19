@@ -36,8 +36,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <nav className="navbar navbar navbar-default">
+        <header className="App-header" >
+          <nav className="navbar-default">
             <div className="container-fluid">
               <div className="navbar-header">
                 <a className="navbar-brand" href="/">
