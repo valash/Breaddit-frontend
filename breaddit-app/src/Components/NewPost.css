@@ -1,5 +1,17 @@
-form {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
+textarea {
+  outline: none;
+}
+
+.submit {
+  position: relative;
+  top: -43px;
+  left: 410px;
+}
+
+
+textarea {
+  background: url("../images/toast.png");
+  background-size: contain; 
+border: 0px solid #888; 
+background-repeat: no-repeat;
 }
