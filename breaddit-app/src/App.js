@@ -4,6 +4,7 @@ import "./App.css";
 import Post from "./Components/Post";
 import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
+import {Navbar, Nav} from 'react-bootstrap';
 
 class App extends Component {
   constructor(props) {
@@ -34,22 +35,23 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <div className="navbar">
-              <ul className="nav">
-                <li className="nav-title" style={{ fontSize: "45px", justifyItems:"space-around"}}>breaddit</li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    <i className="nav-icon cui-speedometer"></i> Home
-        </a>
-                </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/create">
-                    <i className="nav-icon cui-speedometer"></i>New Toast
-                  </a>
-                </li>
+        <header className="App-header" >
+          <nav className="navbar navbar-inverse">
+            <div className="container-fluid">
+              <div className="navbar-header">
+                <a className="navbar-brand" href="/">Breaddit</a>
+              </div>
+              <ul className="nav navbar-nav">
+                <li className="active"><a href="/">Home</a></li>
+                <li><a href="/create">New Toast</a></li>
+                <li><a href="/">About</a></li>
               </ul>
-          </div>
+              <ul className="nav navbar-nav navbar-right">
+                <li><a href="/"><span className="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="/"><span className="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+            </div>
+          </nav>
         </header>
         <Route
           path="/"
