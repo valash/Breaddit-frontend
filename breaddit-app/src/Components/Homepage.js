@@ -1,13 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./HomePage.css";
 
 class Homepage extends Component {
-    render() {
-        return (
-            <div>
-               <p> home page yall! </p>
-            </div>
-        );
-    }
+  //componentDidMount may need to go here
+  render() {
+    return (
+      <div>
+        <Link to="/post/:name">
+          <h3>{this.props.title}</h3>
+        </Link>
+        {/* look up how to put post previews */}
+      </div>
+    );
+  }
 }
 
 export default Homepage;
