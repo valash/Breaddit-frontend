@@ -35,34 +35,38 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <div className="sidebar">
-            <nav className="sidebar-nav">
-              <ul
-                className="nav"
-                style={{
-                  position: "fixed",
-                  top: "0px",
-                  bottom: "0px",
-                  left: "0px",
-                  backgroundColor: "grey"
-                }}
-              >
-                <li className="nav-title">breaddit</li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/">
-                    <i className="nav-icon cui-speedometer" /> Home
+          <nav className="navbar navbar navbar-default">
+            <div className="container-fluid">
+              <div className="navbar-header">
+                <a className="navbar-brand" href="/">
+                  Breaddit
+                </a>
+              </div>
+              <ul className="nav navbar-nav">
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/create">New Toast</a>
+                </li>
+                <li>
+                  <a href="/">About</a>
+                </li>
+              </ul>
+              <ul className="nav navbar-nav navbar-right">
+                <li>
+                  <a href="/signup">
+                    <span className="glyphicon glyphicon-user" /> Sign Up
                   </a>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="/create">
-                    <i className="nav-icon cui-speedometer" />
-                    New Toast
-                    <span className="badge badge-primary">NEW</span>
+                <li>
+                  <a href="/login">
+                    <span className="glyphicon glyphicon-log-in" /> Login
                   </a>
                 </li>
               </ul>
-            </nav>
-          </div>
+            </div>
+          </nav>
         </header>
         <Route
           path="/"
