@@ -4,7 +4,10 @@ import "./App.css";
 import Post from "./Components/Post";
 import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
+import Auth from "./Auth/auth";
 
+const auth = new Auth();
+auth.login();
 class App extends Component {
   constructor(props) {
     super(props);
@@ -16,12 +19,7 @@ class App extends Component {
     this.submission = this.submission.bind(this);
     this.contentSet = this.contentSet.bind(this);
   }
-  signIn(event) {
-    event.preventDefault();
-    //axios
-    // email: this.state.email;
-    // password: this.state.password;
-  }
+
   getData() {
     //fetch data goes here
   }
