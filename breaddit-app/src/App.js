@@ -18,7 +18,6 @@ class App extends Component {
     this.titleSet = this.titleSet.bind(this);
     this.submission = this.submission.bind(this);
     this.bodySet = this.bodySet.bind(this);
-    this.commentCreate = this.commentCreate.bind(this);
   }
   componentDidMount() {
     fetch("http://localhost:3001/Breaddit")
@@ -37,9 +36,7 @@ class App extends Component {
   bodySet(event) {
     this.setState({ body: event.target.value });
   }
-  commentCreate(event) {
-    this.setState({ comments: event.target.value });
-  }
+
   submission(event) {
     event.preventDefault();
     console.log("your post is called " + this.state.title);

@@ -6,7 +6,7 @@ class Homepage extends Component {
   render() {
     const { posts } = this.props;
     return (
-      <div className="titleList" key={posts.id}>
+      <div className="titleList">
         <h3>
           {posts.map(post => (
             <Link to={"/post/" + post.title}>

@@ -10,12 +10,12 @@ class Comment extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
   commentCreate(event) {
-    this.setState({ comments: event.target.value });
     event.preventDefault();
+    this.setState({ comments: event.target.value });
   }
   handleSubmit(event) {
-    console.log(event.target.value);
     event.preventDefault();
+    console.log(this.state.comments);
   }
   render() {
     return (
@@ -32,7 +32,7 @@ class Comment extends Component {
           />
           <input type="submit" value="Comment!" />
         </form>
-        <p>New comments should appear here</p>
+        <p>New comments should appear here:</p>
         {this.state.comments}
       </div>
     );

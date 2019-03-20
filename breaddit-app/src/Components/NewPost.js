@@ -2,11 +2,33 @@ import React, { Component } from "react";
 import "./NewPost.css";
 
 class NewPost extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: []
+    };
+    this.titleSet = this.titleSet.bind(this);
+    this.bodySet = this.bodySet.bind(this);
+    this.submission = this.submission.bind(this);
+  }
+  titleSet(event) {
+    this.setState({ title: event.target.value });
+  }
+  bodySet(event) {
+    this.setState({ body: event.target.value });
+  }
+  submission(event) {
+    event.preventDefault();
+    console.log("your post is called " + this.state.title);
+    console.log("This is your post! " + this.state.body);
+    console.log("here are the comments: " + this.state.comments);
+    return this.state.title && this.state.body;
+  }
   render() {
     return (
       <div className="card">
         <div className="card-body">
-          <form style={{ height: "0" }} onSubmit={this.props.submission}>
+          <form style={{ height: "0" }} onSubmit={this.submission}>
             <label
               for="NewPost"
               className="grey-text font-weight-light"
@@ -18,7 +40,7 @@ class NewPost extends Component {
               type="text"
               placeholder="title"
               name={this.props.title}
-              onChange={this.props.titleSet}
+              onChange={this.titleSet}
               style={{ margin: "auto", width: "500px" }}
             />
             <label
@@ -32,7 +54,7 @@ class NewPost extends Component {
               rows="30"
               placeholder="We're BREAD-y for your message"
               name={this.props.body}
-              onChange={this.props.bodySet}
+              onChange={this.bodySet}
               style={{
                 margin: "80px 541.441px 0px 566.128px;",
                 display: "block;"
