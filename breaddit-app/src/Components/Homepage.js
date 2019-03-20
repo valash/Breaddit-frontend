@@ -3,12 +3,30 @@ import { Link } from "react-router-dom";
 import "./HomePage.css";
 
 class Homepage extends Component {
-  //componentDidMount may need to go here
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: []
+    };
+  }
+  componentDidMount() {
+    fetch("http://localhost:3001/Breaddit")
+      .then(result => {
+        return result.json();
+      })
+      .then(post => {
+        this.setState({ post: post.title });
+      });
+  }
   render() {
     return (
       <div>
         <Link to="/post/:name">
-          <h3>{this.props.title}</h3>
+          <h3>
+            {this.state.posts.map(post => (
+              <div key={post.id}>{post.title}</div>
+            ))}
+          </h3>
         </Link>
         {/* look up how to put post previews */}
       </div>
