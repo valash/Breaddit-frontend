@@ -20,6 +20,7 @@ class App extends Component {
     this.contentSet = this.contentSet.bind(this);
   }
   componentDidMount() {
+    //remember to pull from heroku in deployed version
     fetch("http://localhost:3001/Breaddit")
       .then(result => {
         return result.json();
@@ -38,15 +39,15 @@ class App extends Component {
   }
   submission(event) {
     event.preventDefault();
-    // console.log("your post is called " + this.state.title);
-    // console.log("This is your post! " + this.state.content);
+    console.log("your post is called " + this.state.title);
+    console.log("This is your post! " + this.state.content);
     return this.state.title && this.state.content;
   }
 
   render() {
     return (
       <div className="App">
-        <header className="App-header" >
+        <header className="App-header">
           <nav className="navbar-default">
             <div className="container-fluid">
               <div className="navbar-header">
