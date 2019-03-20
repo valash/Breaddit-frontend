@@ -10,22 +10,27 @@ class Homepage extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3001/Breaddit").then(result => {
-      console.log(result.json());
-    });
-    // .then(post => {
-    //   this.setState({ post: post.title });
-    // });
+    fetch("http://localhost:3001/Breaddit")
+      .then(result => {
+        return result.json();
+      })
+      .then(data =>
+        this.setState({
+          posts: data
+        })
+      );
   }
   render() {
+    const { posts } = this.state;
     return (
       <div>
         <Link to="/post/:name">
           <h3>
-            {this.state.posts.map(post => (
+            {posts.map(post => (
               <div key={post.id}>{post.title}</div>
             ))}
           </h3>
+          {/* for each??????? */}
         </Link>
         {/* look up how to put post previews */}
       </div>
