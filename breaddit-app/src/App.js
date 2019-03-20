@@ -20,7 +20,6 @@ class App extends Component {
     this.contentSet = this.contentSet.bind(this);
   }
   componentDidMount() {
-    //remember to pull from heroku in deployed version
     fetch("http://localhost:3001/Breaddit")
       .then(result => {
         return result.json();
