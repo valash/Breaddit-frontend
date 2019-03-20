@@ -10,13 +10,12 @@ class Homepage extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3001/Breaddit")
-      .then(result => {
-        return result.json();
-      })
-      .then(post => {
-        this.setState({ post: post.title });
-      });
+    fetch("http://localhost:3001/Breaddit").then(result => {
+      console.log(result.json());
+    });
+    // .then(post => {
+    //   this.setState({ post: post.title });
+    // });
   }
   render() {
     return (
