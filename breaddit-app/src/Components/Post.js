@@ -6,9 +6,6 @@ class Post extends Component {
     const { posts } = this.props;
     return (
       <div className="singlePost" key={posts.id}>
-        {posts.map(post => (
-          <div key={post.id}>{post.body}</div>
-        ))}
         {/*how can I get data from the form to render here????? */}
         <h2>{this.props.title} </h2>
         <p>{this.props.body}</p>

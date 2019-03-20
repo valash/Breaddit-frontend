@@ -13,8 +13,7 @@ class App extends Component {
     this.state = {
       title: " ",
       body: " ",
-      posts: [],
-      comments: []
+      posts: []
     };
     this.titleSet = this.titleSet.bind(this);
     this.submission = this.submission.bind(this);
@@ -40,7 +39,6 @@ class App extends Component {
   }
   commentCreate(event) {
     this.setState({ comments: event.target.value });
-    console.log("shots fired!" + this.state.comments);
   }
   submission(event) {
     event.preventDefault();

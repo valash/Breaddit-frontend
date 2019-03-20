@@ -26,7 +26,7 @@ class NewPost extends Component {
               className="grey-text font-weight-light"
               style={{ display: "block" }}
             >
-              Body:
+              Post:
             </label>
             <textarea
               rows="30"
