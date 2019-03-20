@@ -6,26 +6,47 @@ class NewPost extends Component {
     return (
       <div className="card">
         <div className="card-body">
-        <form style={{height:"0"}}>
-        <label for="NewPost" onSubmit={this.props.submission}className="grey-text font-weight-light" style={{display:"block"}}> Title</label>
-          <input type="text" placeholder="title"  onChange={this.props.titleSet} style={{margin:"auto", width:"500px"}}/>
-              <label for="postBody" className="grey-text font-weight-light" onSubmit={this.props.submission}style={{display:"block"}}>Body:</label>
-          <textarea
-            placeholder="We're BREAD-y for your message"
-            onChange={this.props.contentSet}
-              style={{ margin:"80px 541.441px 0px 566.128px;", display:"block;"
-               }}
-          />       
-          <form>
-              <input type="submit" style={{ backgroundColor: 'grey', border:"0px", color:"white" }} value="Submit" />
+
+          <form style={{ height: "0" }} onSubmit={this.props.submission}>
+            <label
+              for="NewPost"
+              className="grey-text font-weight-light"
+              style={{ display: "block" }}
+            >
+              Title
+            </label>
+            <input
+              type="text"
+              placeholder="title"
+              name={this.props.title}
+              onChange={this.props.titleSet}
+              style={{ margin: "auto", width: "500px" }}
+            />
+            <label
+              for="postBody"
+              className="grey-text font-weight-light"
+              style={{ display: "block" }}
+            >
+              Body:
+            </label>
+            <textarea
+              rows="30"
+              placeholder="We're BREAD-y for your message"
+              name={this.props.content}
+              onChange={this.props.contentSet}
+              style={{
+                margin: "80px 541.441px 0px 566.128px;",
+                display: "block;"
+              }}
+            />
+
+            <input type="submit" value="Submit" />
+
           </form>
-            </form>
-          
         </div>
       </div>
     );
   }
 }
-
 
 export default NewPost;
