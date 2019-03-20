@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
   text-decoration: none;
     font-family:'Source Code Pro:900', monospace;
@@ -19,6 +20,32 @@ a:link, a:visited, a:hover, a:active {
   color:black;
   text-decoration: none;
   font-size: 20px;
+=======
+.App {
+  text-align: center;
+  background-image: url("./images/cut-bread.jpg");
+}
+
+
+.App-header {
+  background-color: rgb(131, 156, 207);
+  height: 100pc;
+  display: block;
+  float: left;
+  font-size: 20px;
+  color: white;
+  width: 110px;
+}
+
+.Nav.Link {
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  background-color: #f1f1f1;
+  height: 100%;
+  position: fixed; 
+  overflow: auto; 
+>>>>>>> parent of f11e9c9... more nav bar styling
 }
 
 
