@@ -6,6 +6,7 @@ import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
 import SignUp from "./Components/SignUp";
 import logIn from "./Components/logIn";
+import './images/bread.jpg';
 
 class App extends Component {
   constructor(props) {
@@ -118,8 +119,7 @@ class App extends Component {
         />
 
 
-        <div className="footer" style={{position:"fixed", left:"0", bottom:"0", width:"100%", backgroundColor:"white", color:"black", textAlign:"center", lineHeight:"30px", fontSize:"xx-large"}}>
-         <p>footer yall</p>
+        <div className="footer" style={{ position: "fixed", left: "0", bottom: "0", width: "100%", backgroundColor: "none", color: "black", textAlign: "center", lineHeight: "30px", fontSize: "xx-large" }} ><img src={require('./images/bread.jpg')} alt="bread pic" style={{width:"90px", height:"90px", borderRadius:"10px"}}/>
         </div>
       </div>
     );
