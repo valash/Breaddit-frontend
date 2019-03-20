@@ -3,9 +3,9 @@
   font-family: "Source Code Pro:900", monospace;
 }
 
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 h1 {
   margin-top: 0px;
@@ -32,5 +32,4 @@ a:-webkit-any-link {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  
 }

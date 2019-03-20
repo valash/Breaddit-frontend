@@ -6,11 +6,11 @@ class Homepage extends Component {
   render() {
     const { posts } = this.props;
     return (
-      <div className="titleList" key={posts.id}>
+      <div className="card-body" style={{textAlign:"center"}} > 
         <h3>
           {posts.map(post => (
-            <Link to={"/post/" + post.title}>
-              <div key={post.id}>{post.title}</div>
+            <Link to={"/post/" + post.title} >
+              <div style={{ border: "5px solid black", margin:"20%", borderRadius:"5px" }} key={post.id}>{post.title}</div>
             </Link>
           ))}
         </h3>
