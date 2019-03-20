@@ -3,11 +3,20 @@ textarea {
 }
 
 
-
-
 textarea {
   background: url("../images/toast.png");
   background-size: contain; 
-border: 0px solid #888; 
-background-repeat: no-repeat;
+  border: 0px solid #888; 
+  background-repeat: no-repeat;
+  margin: 0px;
+  height: 712px;
+  width: 683px;
+  opacity: 0.6;
+  filter: alpha(opacity=30);
 }
+
+textarea:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100)
+}
+
