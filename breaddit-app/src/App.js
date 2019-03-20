@@ -12,14 +12,26 @@ class App extends Component {
     super(props);
     this.state = {
       title: " ",
-      content: " "
+      content: " ",
+      posts: []
     };
     this.titleSet = this.titleSet.bind(this);
     this.submission = this.submission.bind(this);
     this.contentSet = this.contentSet.bind(this);
   }
-  getData() {
-    //fetch data goes here
+  // getData() {
+
+  // }
+  componentDidMount() {
+    fetch("http://localhost:3001/Breaddit")
+      .then(result => {
+        return result.json();
+      })
+      .then(data =>
+        this.setState({
+          posts: data
+        })
+      );
   }
   titleSet(event) {
     this.setState({ title: event.target.value });
@@ -74,7 +86,11 @@ class App extends Component {
           path="/"
           exact
           render={props => (
-            <HomePage title={this.state.title} content={this.state.content} />
+            <HomePage
+              title={this.state.title}
+              content={this.state.content}
+              posts={this.state.posts}
+            />
           )}
         />
         <Route path="/login" component={logIn} />
