@@ -1,8 +1,9 @@
 textarea {
   outline: none;
+  
 }
 
-
+/* 
 textarea {
   background: url("../images/toast.png");
   background-size: contain; 
@@ -18,5 +19,5 @@ textarea {
 textarea:hover {
   opacity: 1.0;
   filter: alpha(opacity=100)
-}
+} */
 
