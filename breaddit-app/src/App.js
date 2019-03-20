@@ -37,9 +37,10 @@ class App extends Component {
     this.setState({ content: event.target.value });
   }
   submission(event) {
-    console.log("your post is called " + this.state.title);
-    console.log("This is your post! " + this.state.content);
+    // console.log("your post is called " + this.state.title);
+    // console.log("This is your post! " + this.state.content);
     event.preventDefault();
+    return <Post title={this.state.title} content={this.state.content} />;
   }
 
   render() {
