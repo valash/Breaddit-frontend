@@ -19,9 +19,6 @@ class App extends Component {
     this.submission = this.submission.bind(this);
     this.contentSet = this.contentSet.bind(this);
   }
-  // getData() {
-
-  // }
   componentDidMount() {
     fetch("http://localhost:3001/Breaddit")
       .then(result => {
@@ -40,9 +37,10 @@ class App extends Component {
     this.setState({ content: event.target.value });
   }
   submission(event) {
-    console.log("your post is called " + this.state.title);
-    console.log("This is your post! " + this.state.content);
     event.preventDefault();
+    // console.log("your post is called " + this.state.title);
+    // console.log("This is your post! " + this.state.content);
+    return this.state.title && this.state.content;
   }
 
   render() {
@@ -98,7 +96,11 @@ class App extends Component {
         <Route
           path="/post/:name"
           render={props => (
-            <Post title={this.state.title} content={this.state.content} />
+            <Post
+              title={this.state.title}
+              content={this.state.content}
+              posts={this.state.posts}
+            />
           )}
         />
         <Route

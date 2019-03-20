@@ -6,16 +6,14 @@ class Homepage extends Component {
   render() {
     const { posts } = this.props;
     return (
-      <div>
-        <Link to="/post/:title">
-          <h3>
-            {posts.map(post => (
+      <div className="titleList" key={posts.id}>
+        <h3>
+          {posts.map(post => (
+            <Link to={"/post/" + post.title}>
               <div key={post.id}>{post.title}</div>
-            ))}
-          </h3>
-          {/* for each??????? */}
-        </Link>
-        
+            </Link>
+          ))}
+        </h3>
         {/* look up how to put post previews */}
       </div>
     );
