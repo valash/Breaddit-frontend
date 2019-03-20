@@ -19,9 +19,6 @@ class App extends Component {
     this.submission = this.submission.bind(this);
     this.contentSet = this.contentSet.bind(this);
   }
-  // getData() {
-
-  // }
   componentDidMount() {
     fetch("http://localhost:3001/Breaddit")
       .then(result => {
@@ -98,7 +95,11 @@ class App extends Component {
         <Route
           path="/post/:name"
           render={props => (
-            <Post title={this.state.title} content={this.state.content} />
+            <Post
+              title={this.state.title}
+              content={this.state.content}
+              posts={this.state.posts}
+            />
           )}
         />
         <Route
