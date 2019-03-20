@@ -12,12 +12,14 @@ class App extends Component {
     super(props);
     this.state = {
       title: " ",
-      content: " ",
-      posts: []
+      body: " ",
+      posts: [],
+      comments: []
     };
     this.titleSet = this.titleSet.bind(this);
     this.submission = this.submission.bind(this);
-    this.contentSet = this.contentSet.bind(this);
+    this.bodySet = this.bodySet.bind(this);
+    this.commentCreate = this.commentCreate.bind(this);
   }
   componentDidMount() {
     fetch("http://localhost:3001/Breaddit")
@@ -33,14 +35,19 @@ class App extends Component {
   titleSet(event) {
     this.setState({ title: event.target.value });
   }
-  contentSet(event) {
-    this.setState({ content: event.target.value });
+  bodySet(event) {
+    this.setState({ body: event.target.value });
+  }
+  commentCreate(event) {
+    this.setState({ comments: event.target.value });
+    console.log("shots fired!" + this.state.comments);
   }
   submission(event) {
     event.preventDefault();
     console.log("your post is called " + this.state.title);
-    console.log("This is your post! " + this.state.content);
-    return this.state.title && this.state.content;
+    console.log("This is your post! " + this.state.body);
+    console.log("here are the comments: " + this.state.comments);
+    return this.state.title && this.state.body;
   }
 
   render() {
@@ -86,7 +93,7 @@ class App extends Component {
           render={props => (
             <HomePage
               title={this.state.title}
-              content={this.state.content}
+              body={this.state.body}
               posts={this.state.posts}
             />
           )}
@@ -98,8 +105,10 @@ class App extends Component {
           render={props => (
             <Post
               title={this.state.title}
-              content={this.state.content}
+              body={this.state.body}
               posts={this.state.posts}
+              comments={this.state.comments}
+              commentCreate={this.state.commentCreate}
             />
           )}
         />
@@ -108,10 +117,10 @@ class App extends Component {
           render={props => (
             <NewPost
               titleSet={this.titleSet}
-              contentSet={this.contentSet}
+              bodySet={this.bodySet}
               submission={this.submission}
               title={this.state.title}
-              content={this.state.content}
+              body={this.state.body}
             />
           )}
         />

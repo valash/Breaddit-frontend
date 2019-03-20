@@ -31,8 +31,8 @@ class NewPost extends Component {
             <textarea
               rows="30"
               placeholder="We're BREAD-y for your message"
-              name={this.props.content}
-              onChange={this.props.contentSet}
+              name={this.props.body}
+              onChange={this.props.bodySet}
               style={{
                 margin: "80px 541.441px 0px 566.128px;",
                 display: "block;"
