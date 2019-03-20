@@ -13,8 +13,6 @@ class NewPost extends Component {
           <textarea
             placeholder="We're BREAD-y for your message"
             onChange={this.props.contentSet}
-              style={{ margin:"80px 541.441px 0px 566.128px;", display:"block;"
-               }}
           />       
           <form>
               <input type="submit" style={{ backgroundColor: 'White', color: "Black", height:"34px", width:"76px", borderRadius:"9px", fontSize:"15px" }} value="Submit" />

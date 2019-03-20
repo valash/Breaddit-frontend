@@ -15,10 +15,15 @@ class Homepage extends Component {
           </h3>
           {/* for each??????? */}
         </Link>
+        
         {/* look up how to put post previews */}
       </div>
     );
-  }
-}
+       }
+  
+    }
+
+
+    
 
 export default Homepage;
