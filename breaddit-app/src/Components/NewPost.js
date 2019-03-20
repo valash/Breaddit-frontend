@@ -32,6 +32,7 @@ class NewPost extends Component {
               rows="30"
               placeholder="We're BREAD-y for your message"
               name={this.props.content}
+              onChange={this.props.contentSet}
               style={{
                 margin: "80px 541.441px 0px 566.128px;",
                 display: "block;"
@@ -41,7 +42,6 @@ class NewPost extends Component {
             <input type="submit" value="Submit" />
           </form>
         </div>
-        {this.props.title && this.props.content}
       </div>
     );
   }
