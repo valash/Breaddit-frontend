@@ -3,9 +3,9 @@
   font-family: "Source Code Pro:900", monospace;
 }
 
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 h1 {
   margin-top: 0px;
@@ -26,8 +26,7 @@ a:active {
 a:-webkit-any-link {
   text-decoration: none;
 }
-
-html {
+ html {
   background: url(images/cut-bread.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
