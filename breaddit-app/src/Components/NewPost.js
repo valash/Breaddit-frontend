@@ -6,6 +6,7 @@ class NewPost extends Component {
     return (
       <div className="card">
         <div className="card-body">
+
           <form style={{ height: "0" }} onSubmit={this.props.submission}>
             <label
               for="NewPost"
@@ -40,6 +41,7 @@ class NewPost extends Component {
             />
 
             <input type="submit" value="Submit" />
+
           </form>
         </div>
       </div>
