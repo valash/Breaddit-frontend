@@ -16,7 +16,7 @@ class App extends Component {
       body: " "
     };
     // this.titleSet = this.titleSet.bind(this);
-    this.submission = this.submission.bind(this);
+    // this.submission = this.submission.bind(this);
     this.bodySet = this.bodySet.bind(this);
   }
 
@@ -27,13 +27,13 @@ class App extends Component {
     this.setState({ body: event.target.value });
   }
 
-  submission(event) {
-    event.preventDefault();
-    console.log("your post is called " + this.state.title);
-    console.log("This is your post! " + this.state.body);
-    console.log("here are the comments: " + this.state.comments);
-    return this.state.title && this.state.body;
-  }
+  // submission(event) {
+  //   event.preventDefault();
+  //   console.log("your post is called " + this.state.title);
+  //   console.log("This is your post! " + this.state.body);
+  //   console.log("here are the comments: " + this.state.comments);
+  //   return this.state.title && this.state.body;
+  // }
 
   render() {
     return (
@@ -91,6 +91,7 @@ class App extends Component {
           path="/post/:name"
           render={props => (
             <Post
+              {...props}
               title={this.state.title}
               body={this.state.body}
               comments={this.state.comments}
