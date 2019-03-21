@@ -34,7 +34,10 @@ class Comment extends Component {
 				{/* Need to find a way to push input into this array i just created so that multiple comments can appear on the page */}
 				<div
 					className='card-title'
-					style={{fontSize: 'xx-large'}}>
+					style={{
+						fontSize: 'xx-large',
+						marginTop: '50px'
+					}}>
 					I am from the Comment Component!
 				</div>
 				<form
@@ -55,14 +58,14 @@ class Comment extends Component {
 					/>
 					<input
 						type='submit'
-						value='Comment'
+						value='Add Comment'
 						onClick={this.addComment}
 						style={{
 							width: 'fit-content',
 							marginTop: '10px',
 							margin: 'auto',
 							borderRadius: '6px',
-							border: '1px solid black'
+							border: '0.8px solid grey'
 						}}
 					/>
 				</form>
