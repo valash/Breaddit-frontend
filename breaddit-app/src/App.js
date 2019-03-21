@@ -6,6 +6,7 @@ import HomePage from './Components/Homepage';
 import NewPost from './Components/NewPost';
 import SignUp from './Components/SignUp';
 import logIn from './Components/logIn';
+import About from './Components/About';
 
 import './images/logo.png';
 
@@ -75,7 +76,9 @@ class App extends Component {
 									</a>
 								</li>
 								<li>
-									<a href='/'>About</a>
+									<a href='/about'>
+										About
+									</a>
 								</li>
 							</ul>
 							<ul className='nav navbar-nav navbar-right'>
@@ -132,6 +135,7 @@ class App extends Component {
 						/>
 					)}
 				/>
+				<Route path='/about' component={About} />
 			</div>
 		);
 	}
