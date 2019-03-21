@@ -1,3 +1,4 @@
+
 import React, {Component} from 'react';
 import {Route, Link} from 'react-router-dom';
 import './App.css';
@@ -8,38 +9,33 @@ import SignUp from './Components/SignUp';
 import logIn from './Components/logIn';
 import About from './Components/About';
 
+
 class App extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			title: ' ',
-			body: ' '
-		};
-		// this.titleSet = this.titleSet.bind(this);
-		this.submission = this.submission.bind(this);
-		this.bodySet = this.bodySet.bind(this);
-	}
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: " ",
+      body: " "
+    };
+    // this.titleSet = this.titleSet.bind(this);
+    this.submission = this.submission.bind(this);
+    this.bodySet = this.bodySet.bind(this);
+  }
 
-	// titleSet(event) {
-	// 	this.setState({title: event.target.value});
-	// }
-	bodySet(event) {
-		this.setState({body: event.target.value});
-	}
+  // titleSet(event) {
+  // 	this.setState({title: event.target.value});
+  // }
+  bodySet(event) {
+    this.setState({ body: event.target.value });
+  }
 
-	submission(event) {
-		event.preventDefault();
-		console.log(
-			'your post is called ' + this.state.title
-		);
-		console.log(
-			'This is your post! ' + this.state.body
-		);
-		console.log(
-			'here are the comments: ' + this.state.comments
-		);
-		return this.state.title && this.state.body;
-	}
+  submission(event) {
+    event.preventDefault();
+    console.log("your post is called " + this.state.title);
+    console.log("This is your post! " + this.state.body);
+    console.log("here are the comments: " + this.state.comments);
+    return this.state.title && this.state.body;
+  }
 
 	render() {
 		return (
