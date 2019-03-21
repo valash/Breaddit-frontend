@@ -6,7 +6,7 @@ import HomePage from './Components/Homepage';
 import NewPost from './Components/NewPost';
 import SignUp from './Components/SignUp';
 import logIn from './Components/logIn';
-import Search from './Components/Search';
+
 import './images/logo.png';
 
 class App extends Component {
@@ -76,9 +76,6 @@ class App extends Component {
 								</li>
 								<li>
 									<a href='/'>About</a>
-								</li>
-								<li>
-									<Search />
 								</li>
 							</ul>
 							<ul className='nav navbar-nav navbar-right'>
