@@ -63,7 +63,7 @@ class NewPost extends Component {
 							<input
 								type='text'
 								aria-label='Large'
-								placeholder='Rye hello there'
+								placeholder='rye hello there...'
 								name={this.props.title}
 								onChange={this.titleSet}
 								style={{
@@ -92,8 +92,8 @@ class NewPost extends Component {
 								name={this.props.body}
 								onChange={this.bodySet}
 								style={{
-									margin:
-										'80px 541.441px 0px 566.128px;',
+									// margin:
+									// 	'80px 541.441px 0px 566.128px;',
 									display: 'block;',
 									fontSize: '55px',
 									width: '600px',
