@@ -1,64 +1,29 @@
 import React, {Component} from 'react';
+import Chase from './aboutImages/Chase.jpg';
+import Joey from './aboutImages/Joey.jpg';
+import VA from './aboutImages/VA.jpg';
+import Alsia from './aboutImages/Alsia.jpg';
 
 class About extends Component {
 	render() {
 		return (
-			<div className='card-deck'>
+			<div
+				className='card-deck'
+				style={{textAlign: 'center'}}>
 				<div className='card'>
 					<img
 						className='card-img-top'
-						src='...'
-						alt='Card cap'
+						src={Alsia}
+						alt='Alsia pic'
+						style={{
+							height: '180px',
+							width: '267px:',
+							marginLeft: 'auto'
+						}}
 					/>
 					<div className='card-body'>
 						<h5 className='card-title'>
-							Card title
-						</h5>
-						<p className='card-text'>
-							This is a wider card with
-							supporting text below as a
-							natural lead-in to additional
-							content. This content is a
-							little bit longer.
-						</p>
-					</div>
-					<div className='card-footer'>
-						<small className='text-muted'>
-							Last updated 3 mins ago
-						</small>
-					</div>
-				</div>
-				<div className='card'>
-					<img
-						className='card-img-top'
-						src='...'
-						alt='Card cap'
-					/>
-					<div className='card-body'>
-						<h5 className='card-title'>
-							Card title
-						</h5>
-						<p className='card-text'>
-							This card has supporting text
-							below as a natural lead-in to
-							additional content.
-						</p>
-					</div>
-					<div className='card-footer'>
-						<small className='text-muted'>
-							Last updated 3 mins ago
-						</small>
-					</div>
-				</div>
-				<div className='card'>
-					<img
-						className='card-img-top'
-						src='...'
-						alt='Card cap'
-					/>
-					<div className='card-body'>
-						<h5 className='card-title'>
-							Card title
+							Alsia
 						</h5>
 						<p className='card-text'>
 							This is a wider card with
@@ -78,13 +43,76 @@ class About extends Component {
 				<div className='card'>
 					<img
 						className='card-img-top'
-						src='...'
-						alt='Card cap'
+						src={Chase}
+						alt='Chase pic'
+						style={{
+							height: '180px',
+							width: '267px:',
+							marginLeft: 'auto'
+						}}
 					/>
 					<div className='card-body'>
 						<h5 className='card-title'>
-							Card title
+							Chase
 						</h5>
+						<p className='card-text'>
+							This is a wider card with
+							supporting text below as a
+							natural lead-in to additional
+							content. This card has even
+							longer content than the first to
+							show that equal height action.
+						</p>
+					</div>
+					<div className='card-footer'>
+						<small className='text-muted'>
+							Last updated 3 mins ago
+						</small>
+					</div>
+				</div>
+				<div className='card'>
+					<img
+						className='card-img-top'
+						src={VA}
+						alt='VA pic'
+						style={{
+							height: '180px',
+							width: '267px:',
+							marginLeft: 'auto'
+						}}
+					/>
+					<div className='card-body'>
+						<h5 className='card-title'>
+							Virginia
+						</h5>
+						<p className='card-text'>
+							This is a wider card with
+							supporting text below as a
+							natural lead-in to additional
+							content. This card has even
+							longer content than the first to
+							show that equal height action.
+						</p>
+					</div>
+					<div className='card-footer'>
+						<small className='text-muted'>
+							Last updated 3 mins ago
+						</small>
+					</div>
+				</div>
+				<div className='card'>
+					<img
+						className='card-img-top'
+						src={Joey}
+						alt='Joey pic'
+						style={{
+							height: '180px',
+							width: '267px:',
+							marginLeft: 'auto'
+						}}
+					/>
+					<div className='card-body'>
+						<h5 className='card-title'>Joey</h5>
 						<p className='card-text'>
 							This is a wider card with
 							supporting text below as a

@@ -8,8 +8,6 @@ import SignUp from './Components/SignUp';
 import logIn from './Components/logIn';
 import About from './Components/About';
 
-import './images/logo.png';
-
 class App extends Component {
 	constructor(props) {
 		super(props);
