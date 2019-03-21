@@ -27,7 +27,7 @@ a:-webkit-any-link {
   text-decoration: none;
 }
  html {
-  background: url(images/cut-bread.jpg) no-repeat center center fixed;
+  background: url(images/bag.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
