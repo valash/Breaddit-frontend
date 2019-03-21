@@ -21,7 +21,7 @@ class Post extends Component {
           <div className="singlePost">
             {/*how can I get data from the form to render here????? */}
             <h2>{this.props.title} </h2>
-            <p>{this.props.body}</p>
+            <p>{this.props.body} find me</p>
 
             <Comment
               comments={this.props.comments}

@@ -10,7 +10,7 @@ class Homepage extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3001/Breaddit")
+    fetch("https://breaddit123.herokuapp.com/breaddit")
       .then(result => {
         return result.json();
       })

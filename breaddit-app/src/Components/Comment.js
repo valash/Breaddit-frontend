@@ -30,6 +30,7 @@ class Comment extends Component {
       <div>
         {/* Need to find a way to push input into this array i just created so that multiple comments can appear on the page */}
         <h4>I am from the Comment Component!</h4>
+        <p>{this.props.body}</p>
         <form className="makeComment" onSubmit={this.handleSubmit}>
           <textarea
             rows="3"
