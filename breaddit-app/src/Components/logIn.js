@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 class logIn extends Component {
 	render() {
 		return (
-			<div className='card'>
+			<div className='card' style={{border: 'none'}}>
 				<div className='card-body'>
 					<form
 						style={{

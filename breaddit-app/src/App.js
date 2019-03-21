@@ -6,6 +6,7 @@ import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
 import SignUp from "./Components/SignUp";
 import logIn from "./Components/logIn";
+
 import "./images/logo.png";
 
 class App extends Component {
@@ -16,7 +17,7 @@ class App extends Component {
       body: " "
     };
     // this.titleSet = this.titleSet.bind(this);
-    // this.submission = this.submission.bind(this);
+    this.submission = this.submission.bind(this);
     this.bodySet = this.bodySet.bind(this);
   }
 
@@ -27,19 +28,24 @@ class App extends Component {
     this.setState({ body: event.target.value });
   }
 
-  // submission(event) {
-  //   event.preventDefault();
-  //   console.log("your post is called " + this.state.title);
-  //   console.log("This is your post! " + this.state.body);
-  //   console.log("here are the comments: " + this.state.comments);
-  //   return this.state.title && this.state.body;
-  // }
+  submission(event) {
+    event.preventDefault();
+    console.log("your post is called " + this.state.title);
+    console.log("This is your post! " + this.state.body);
+    console.log("here are the comments: " + this.state.comments);
+    return this.state.title && this.state.body;
+  }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <nav className="navbar" style={{ background: "transparent" }}>
+          <nav
+            className="navbar"
+            style={{
+              background: "transparent"
+            }}
+          >
             <div className="container-fluid">
               <div className="navbar-header">
                 <a className="navbar-brand" href="/">
@@ -91,7 +97,6 @@ class App extends Component {
           path="/post/:name"
           render={props => (
             <Post
-              {...props}
               title={this.state.title}
               body={this.state.body}
               comments={this.state.comments}
