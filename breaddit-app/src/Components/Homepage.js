@@ -1,78 +1,61 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import './HomePage.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./HomePage.css";
 
 class Homepage extends Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			posts: []
-		};
-	}
-	componentDidMount() {
-		fetch('https://breaddit123.herokuapp.com/breaddit')
-			.then((result) => {
-				return result.json();
-			})
-			.then((data) =>
-				this.setState({
-					posts: data
-				})
-			);
-	}
-	render() {
-		const {posts} = this.state;
-		return (
-			<div
-				className='card-body'
-				style={{textAlign: 'center'}}>
-				<h1
-					style={{
-						marginTop: '30p'
-					}}>
-					BAKED BREAD
-				</h1>
-				<h3>
-					{posts.map((post) => (
-						// in backend the route is Breaddit/post.id
-						<Link to={'/post/' + post.title}>
-							<div
-								className='card-body'
-								style={{
-									borderRadius: '1px',
-									boxShadow:
-										'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19',
-									textAlign: 'center',
-									width: '60%',
-									marginTop: '40px',
-									marginLeft: '20%',
-									backgroundColor:
-										' rgba(255, 255, 255, 0.6)'
-								}}
-								key={post}>
-								<div
-									className='card-header'
-									style={{
-										textAlign:
-											'-webkit-left'
-									}}>
-									{post.title}
-								</div>
-								<div
-									className='card-body'
-									style={{
-										height: '50px',
-										margin: '12px'
-									}}>
-									{post.body}
-								</div>
-							</div>
-						</Link>
-					))}
-				</h3>
-			</div>
-		);
-	}
+  render() {
+    const { posts } = this.props;
+    return (
+      <div className="card-body" style={{ textAlign: "center" }}>
+        <h1
+          style={{
+            marginTop: "30p"
+          }}
+        >
+          BAKED BREAD
+        </h1>
+        <h3>
+          {posts.map(post => (
+            // in backend the route is Breaddit/post.id
+            <Link to={"/post/" + post.title}>
+              <div
+                className="card-body"
+                style={{
+                  borderRadius: "1px",
+                  boxShadow:
+                    "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19",
+                  textAlign: "center",
+                  width: "60%",
+                  marginTop: "40px",
+                  marginLeft: "20%",
+                  backgroundColor: " rgba(255, 255, 255, 0.6)"
+                }}
+                key={post}
+              >
+                <div
+                  className="card-header"
+                  style={{
+                    textAlign: "-webkit-left"
+                  }}
+                >
+                  {post.title}
+                </div>
+                <div
+                  className="card-body"
+                  style={{
+                    height: "50px",
+                    margin: "12px"
+                  }}
+                >
+                  {post.body}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </h3>
+      </div>
+    );
+  }
 }
 
 export default Homepage;
