@@ -1,13 +1,14 @@
-import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
-import "./App.css";
-import Post from "./Components/Post";
-import HomePage from "./Components/Homepage";
-import NewPost from "./Components/NewPost";
-import SignUp from "./Components/SignUp";
-import logIn from "./Components/logIn";
 
-import "./images/logo.png";
+import React, {Component} from 'react';
+import {Route, Link} from 'react-router-dom';
+import './App.css';
+import Post from './Components/Post';
+import HomePage from './Components/Homepage';
+import NewPost from './Components/NewPost';
+import SignUp from './Components/SignUp';
+import logIn from './Components/logIn';
+import About from './Components/About';
+
 
 class App extends Component {
   constructor(props) {
@@ -36,89 +37,102 @@ class App extends Component {
     return this.state.title && this.state.body;
   }
 
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <nav
-            className="navbar"
-            style={{
-              background: "transparent"
-            }}
-          >
-            <div className="container-fluid">
-              <div className="navbar-header">
-                <a className="navbar-brand" href="/">
-                  <img
-                    src={require("./images/logo.png")}
-                    alt="reddit bread"
-                    style={{
-                      height: "40px"
-                    }}
-                  />
-                </a>
-              </div>
-              <ul className="nav navbar-nav">
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <a href="/create">New Toast</a>
-                </li>
-                <li>
-                  <a href="/">About</a>
-                </li>
-              </ul>
-              <ul className="nav navbar-nav navbar-right">
-                <li>
-                  <Link to="/signup">
-                    <span className="glyphicon glyphicon-user" /> Sign Up
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/login">
-                    <span className="glyphicon glyphicon-log-in" /> Login
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </header>
-        <Route
-          path="/"
-          exact
-          render={props => (
-            <HomePage title={this.state.title} body={this.state.body} />
-          )}
-        />
-        <Route path="/login" component={logIn} />
-        <Route path="/signup" component={SignUp} />
-        <Route
-          path="/post/:name"
-          render={props => (
-            <Post
-              title={this.state.title}
-              body={this.state.body}
-              comments={this.state.comments}
-              commentCreate={this.state.commentCreate}
-            />
-          )}
-        />
-        <Route
-          path="/create"
-          render={props => (
-            <NewPost
-              titleSet={this.titleSet}
-              bodySet={this.bodySet}
-              submission={this.submission}
-              title={this.state.title}
-              body={this.state.body}
-            />
-          )}
-        />
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div className='App'>
+				<header className='App-header'>
+					<nav
+						className='navbar'
+						style={{
+							background: 'transparent'
+						}}>
+						<div className='container-fluid'>
+							<div className='navbar-header'>
+								<a
+									className='navbar-brand'
+									href='/'>
+									<img
+										src={require('./images/logo.png')}
+										alt='reddit bread'
+										style={{
+											height: '40px'
+										}}
+									/>
+								</a>
+							</div>
+							<ul className='nav navbar-nav'>
+								<li>
+									<a href='/'>Home</a>
+								</li>
+								<li>
+									<a href='/create'>
+										New Toast
+									</a>
+								</li>
+								<li>
+									<a href='/about'>
+										About
+									</a>
+								</li>
+							</ul>
+							<ul className='nav navbar-nav navbar-right'>
+								<li>
+									<Link to='/signup'>
+										<span className='glyphicon glyphicon-user' />{' '}
+										Sign Up
+									</Link>
+								</li>
+								<li>
+									<Link to='/login'>
+										<span className='glyphicon glyphicon-log-in' />{' '}
+										Login
+									</Link>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</header>
+				<Route
+					path='/'
+					exact
+					render={(props) => (
+						<HomePage
+							title={this.state.title}
+							body={this.state.body}
+						/>
+					)}
+				/>
+				<Route path='/login' component={logIn} />
+				<Route path='/signup' component={SignUp} />
+				<Route
+					path='/post/:name'
+					render={(props) => (
+						<Post
+							title={this.state.title}
+							body={this.state.body}
+							comments={this.state.comments}
+							commentCreate={
+								this.state.commentCreate
+							}
+						/>
+					)}
+				/>
+				<Route
+					path='/create'
+					render={(props) => (
+						<NewPost
+							titleSet={this.titleSet}
+							bodySet={this.bodySet}
+							submission={this.submission}
+							title={this.state.title}
+							body={this.state.body}
+						/>
+					)}
+				/>
+				<Route path='/about' component={About} />
+			</div>
+		);
+	}
 }
 
 export default App;
