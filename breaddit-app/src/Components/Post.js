@@ -11,7 +11,7 @@ class Post extends Component {
         <h5 className="card-title">{this.props.title}</h5>
         <p className="card-text">{this.props.content}</p>
            <Comment />
-          <div className="card-footer text-muted" style={{ textAlign: "center" }}><h4 style={{justifyContent:"space-between"}}>Burn it Butter it</h4></div>
+          <div className="card-footer text-muted" style={{ textAlign: "center" }}><h4>Burn it Butter it</h4></div>
           </div>
 
           
