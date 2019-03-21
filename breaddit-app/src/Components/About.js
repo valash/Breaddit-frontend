@@ -9,7 +9,10 @@ class About extends Component {
 		return (
 			<div
 				className='card-deck'
-				style={{textAlign: 'center'}}>
+				style={{
+					textAlign: 'center',
+					marginTop: '18%'
+				}}>
 				<div className='card'>
 					<img
 						className='card-img-top'
@@ -33,11 +36,6 @@ class About extends Component {
 							longer content than the first to
 							show that equal height action.
 						</p>
-					</div>
-					<div className='card-footer'>
-						<small className='text-muted'>
-							Last updated 3 mins ago
-						</small>
 					</div>
 				</div>
 				<div className='card'>
@@ -64,11 +62,6 @@ class About extends Component {
 							show that equal height action.
 						</p>
 					</div>
-					<div className='card-footer'>
-						<small className='text-muted'>
-							Last updated 3 mins ago
-						</small>
-					</div>
 				</div>
 				<div className='card'>
 					<img
@@ -94,11 +87,6 @@ class About extends Component {
 							show that equal height action.
 						</p>
 					</div>
-					<div className='card-footer'>
-						<small className='text-muted'>
-							Last updated 3 mins ago
-						</small>
-					</div>
 				</div>
 				<div className='card'>
 					<img
@@ -121,11 +109,6 @@ class About extends Component {
 							longer content than the first to
 							show that equal height action.
 						</p>
-					</div>
-					<div className='card-footer'>
-						<small className='text-muted'>
-							Last updated 3 mins ago
-						</small>
 					</div>
 				</div>
 			</div>
