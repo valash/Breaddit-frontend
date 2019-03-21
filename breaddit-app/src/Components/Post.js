@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Comment from "./Comment";
-
+//use params somewhere
 class Post extends Component {
   render() {
     return (
