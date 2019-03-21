@@ -5,6 +5,12 @@ class Post extends Component {
   render() {
     const { posts } = this.props;
     return (
+      <div className="card" style={{borderRadius:"9px", border: "1px solid black"}}>
+        <div className="card-header bg-transparent border-success">HEADER</div>
+        <div className="card-body text-success">
+
+          <h5 className="card-title">{this.props.title} </h5>
+          <p className="card-text">{this.props.content}</p>
       <div className="singlePost" key={posts.id}>
         {/*how can I get data from the form to render here????? */}
         <h2>{this.props.title} </h2>
@@ -14,6 +20,9 @@ class Post extends Component {
           comments={this.props.comments}
           commentCreate={this.props.commentCreate}
         />
+      </div>
+      <div className="card-footer ">Burn it  Butter It</div>
+      </div>
       </div>
     );
   }

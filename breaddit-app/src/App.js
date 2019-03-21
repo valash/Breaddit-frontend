@@ -6,6 +6,7 @@ import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
 import SignUp from "./Components/SignUp";
 import logIn from "./Components/logIn";
+import './images/bread.jpg';
 
 class App extends Component {
   constructor(props) {
@@ -49,7 +50,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <nav className="navbar-default">
+          <nav className="navbar" style={{background:"transparent"}}>
             <div className="container-fluid">
               <div className="navbar-header">
                 <a className="navbar-brand" href="/">
@@ -119,8 +120,14 @@ class App extends Component {
             />
           )}
         />
+
+
+        <div className="footer" style={{ position: "fixed", left: "0", bottom: "0", width: "100%", backgroundColor: "white", color: "black", textAlign: "center", lineHeight: "30px", fontSize: "xx-large" }} >Footer
+        </div>
       </div>
     );
   }
 }
+
 export default App;
+
