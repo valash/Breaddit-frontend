@@ -14,12 +14,15 @@ class Comment extends Component {
   }
   handleSubmit(event) {
     event.preventDefault();
+    this.setState({ comments: [] });
     console.log(this.state.comments);
   }
   addComment = () => {
-    this.setState(state => {
-      const comments = state.comments.concat(state.value);
-      return comments;
+    this.setState(() => {
+      this.setState({
+        comments: [...this.state.comments, this.state.comments]
+      });
+      // return together;
     });
   };
   render() {
@@ -39,9 +42,8 @@ class Comment extends Component {
           <input type="submit" value="Comment!" onClick={this.addComment} />
         </form>
         <p>New comments should appear here:</p>
-        {this.state.comments.map(comment => (
-          <p>{comment}</p>
-        ))}
+
+        {this.state.comments}
       </div>
     );
   }
