@@ -48,6 +48,7 @@ class Homepage extends Component {
                 key={post}
               >
                 <div className="card-body">{post.title}</div>
+                <div>{post.body}</div>
               </div>
             </Link>
           ))}
