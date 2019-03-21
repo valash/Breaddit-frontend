@@ -10,7 +10,7 @@ class Homepage extends Component {
     };
   }
   componentDidMount() {
-    fetch("http://localhost:3001/Breaddit")
+    fetch("https://breaddit123.herokuapp.com/breaddit")
       .then(result => {
         return result.json();
       })
@@ -48,6 +48,7 @@ class Homepage extends Component {
                 key={post}
               >
                 <div className="card-body">{post.title}</div>
+                <div>{post.body}</div>
               </div>
             </Link>
           ))}
