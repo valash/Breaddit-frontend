@@ -53,8 +53,7 @@ class App extends Component {
             <div className="container-fluid">
               <div className="navbar-header">
                 <a className="navbar-brand" href="/">
-                </a>
-                <img src={require('./images/logo.png')} alt="reddit bread" style={{height:"40px"}} ></img>
+                <img src={require('./images/logo.png')} alt="reddit bread" style={{ height: "40px" }} ></img></a>
               </div>
               <ul className="nav navbar-nav">
                 <li>
