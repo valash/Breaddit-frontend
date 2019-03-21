@@ -4,7 +4,7 @@ import "./NewPost.css";
 class NewPost extends Component {
   render() {
     return (
-      <div className="newPost">
+      <div className="new-post">
       <div className="card">
         <div className="card-body">
           <form style={{ height: "0", textAlign: "center"}} onSubmit={this.props.submission}>

@@ -6,7 +6,7 @@ import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
 import SignUp from "./Components/SignUp";
 import logIn from "./Components/logIn";
-import './images/bread.jpg';
+import './images/logo.png';
 
 class App extends Component {
   constructor(props) {
@@ -53,8 +53,8 @@ class App extends Component {
             <div className="container-fluid">
               <div className="navbar-header">
                 <a className="navbar-brand" href="/">
-                  Breaddit
                 </a>
+                <img src={require('./images/logo.png')} alt="reddit bread" style={{height:"40px"}} ></img>
               </div>
               <ul className="nav navbar-nav">
                 <li>
@@ -118,9 +118,9 @@ class App extends Component {
           )}
         />
 
-
+{/* 
         <div className="footer" style={{ position: "fixed", left: "0", bottom: "0", width: "100%", backgroundColor: "white", color: "black", textAlign: "center", lineHeight: "30px", fontSize: "xx-large" }} >Footer
-        </div>
+        </div> */}
       </div>
     );
   }

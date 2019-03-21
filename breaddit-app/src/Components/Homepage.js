@@ -8,7 +8,7 @@ class Homepage extends Component {
     const { posts } = this.props;
     return (
       <div className="card-body" style={{textAlign:"center"}} > 
-      <h1 style={{marginTop:"30p"}}>BAKED BREAD</h1>
+      <h1 style={{marginTop:"30p"}}>Breaddit</h1>
         <h3>
           {posts.map(post => (
             <Link to={"/post/" + post.title} >
