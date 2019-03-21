@@ -4,7 +4,7 @@ import './SignUp.css';
 class SignUp extends Component {
 	render() {
 		return (
-			<div className='card'>
+			<div className='card' style={{border: 'none'}}>
 				<div className='card-body'>
 					<form
 						style={{
