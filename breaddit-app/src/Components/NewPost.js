@@ -33,7 +33,12 @@ class NewPost extends Component {
 	render() {
 		return (
 			<div className='newPost'>
-				<div className='card'>
+				<div
+					className='card'
+					style={{
+						background: 'transparent',
+						border: 'none'
+					}}>
 					<div
 						className='card-body'
 						style={{
@@ -65,12 +70,12 @@ class NewPost extends Component {
 								style={{
 									margin: 'auto',
 									width: '600px',
-									fontSize:
-										'-webkit-x-large',
+									fontSize: '30px',
 									borderRadius: '5px',
 									border: 'none',
 									boxShadow:
-										'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19'
+										'0 4px 34px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19',
+									textAlign: 'center'
 								}}
 							/>
 							<label
@@ -78,8 +83,7 @@ class NewPost extends Component {
 								className='grey-text font-weight-light'
 								style={{
 									display: 'block',
-									fontSize:
-										'-webkit-x-large',
+									fontSize: '30px',
 									borderRadius: '5px'
 								}}>
 								Post:
@@ -95,12 +99,14 @@ class NewPost extends Component {
 									margin:
 										'80px 541.441px 0px 566.128px;',
 									display: 'block;',
-									fontSize: '80px',
+									fontSize: '55px',
 									width: '625px',
-									height: '669px',
+									height: '21rem',
 									borderRadius: '10px',
 									boxShadow:
-										'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19'
+										'0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',
+									border: 'none',
+									textAlign: 'center'
 								}}
 							/>
 							<div
