@@ -23,3 +23,7 @@
 	opacity: 1;
 	filter: alpha(opacity=100);
 } */
+
+* {
+	font-family: 'Montserrat', sans-serif;
+}
