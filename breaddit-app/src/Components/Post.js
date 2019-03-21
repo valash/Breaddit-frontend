@@ -2,15 +2,23 @@ import React, { Component } from "react";
 import Comment from "./Comment";
 
 class Post extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: []
+    };
+  }
   render() {
-    const { posts } = this.props;
     return (
-      <div className="card text-center" key={posts.id} style={{width:"50%", margin:"auto", marginTop:"10%"}}>
+      <div className="card text-center" style={{width:"50%", margin:"auto", marginTop:"10%"}}>
         {/* <div class="card-header">{this.props.title}</div> */}
         <div className="card-body">
         <h5 className="card-title">{this.props.title}</h5>
         <p className="card-text">{this.props.content}</p>
-           <Comment />
+          <Comment
+            comments={this.props.comments}
+            commentCreate={this.props.commentCreate}
+          />
           <div className="card-footer text-muted" style={{ textAlign: "center" }}><h4>Burn it Butter it</h4></div>
           </div>
 

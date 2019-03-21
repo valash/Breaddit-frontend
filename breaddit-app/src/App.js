@@ -13,43 +13,33 @@ class App extends Component {
     super(props);
     this.state = {
       title: " ",
-      content: " ",
-      posts: []
+      body: " "
     };
     this.titleSet = this.titleSet.bind(this);
     this.submission = this.submission.bind(this);
-    this.contentSet = this.contentSet.bind(this);
+    this.bodySet = this.bodySet.bind(this);
   }
-  componentDidMount() {
-    //remember to pull from heroku in deployed version
-    fetch("http://localhost:3001/Breaddit")
-      .then(result => {
-        return result.json();
-      })
-      .then(data =>
-        this.setState({
-          posts: data
-        })
-      );
-  }
+
   titleSet(event) {
     this.setState({ title: event.target.value });
   }
-  contentSet(event) {
-    this.setState({ content: event.target.value });
+  bodySet(event) {
+    this.setState({ body: event.target.value });
   }
+
   submission(event) {
     event.preventDefault();
     console.log("your post is called " + this.state.title);
-    console.log("This is your post! " + this.state.content);
-    return this.state.title && this.state.content;
+    console.log("This is your post! " + this.state.body);
+    console.log("here are the comments: " + this.state.comments);
+    return this.state.title && this.state.body;
   }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <nav className="navbar" style={{background:"transparent"}}>
+          <nav className="navbar" style={{ background: "transparent" }}>
             <div className="container-fluid">
               <div className="navbar-header">
                 <a className="navbar-brand" href="/">
@@ -85,11 +75,7 @@ class App extends Component {
           path="/"
           exact
           render={props => (
-            <HomePage
-              title={this.state.title}
-              content={this.state.content}
-              posts={this.state.posts}
-            />
+            <HomePage title={this.state.title} body={this.state.body} />
           )}
         />
         <Route path="/login" component={logIn} />
@@ -99,8 +85,9 @@ class App extends Component {
           render={props => (
             <Post
               title={this.state.title}
-              content={this.state.content}
-              posts={this.state.posts}
+              body={this.state.body}
+              comments={this.state.comments}
+              commentCreate={this.state.commentCreate}
             />
           )}
         />
@@ -109,17 +96,13 @@ class App extends Component {
           render={props => (
             <NewPost
               titleSet={this.titleSet}
-              contentSet={this.contentSet}
+              bodySet={this.bodySet}
               submission={this.submission}
               title={this.state.title}
-              content={this.state.content}
+              body={this.state.body}
             />
           )}
         />
-
-{/* 
-        <div className="footer" style={{ position: "fixed", left: "0", bottom: "0", width: "100%", backgroundColor: "white", color: "black", textAlign: "center", lineHeight: "30px", fontSize: "xx-large" }} >Footer
-        </div> */}
       </div>
     );
   }
@@ -127,3 +110,5 @@ class App extends Component {
 
 export default App;
 
+//localhost://3001/breaddit/:postId
+//          :/post/Chase
