@@ -6,31 +6,20 @@ import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
 import SignUp from "./Components/SignUp";
 import logIn from "./Components/logIn";
-import './images/bread.jpg';
+import "./images/bread.jpg";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       title: " ",
-      body: " ",
-      posts: []
+      body: " "
     };
     this.titleSet = this.titleSet.bind(this);
     this.submission = this.submission.bind(this);
     this.bodySet = this.bodySet.bind(this);
   }
-  componentDidMount() {
-    fetch("http://localhost:3001/Breaddit")
-      .then(result => {
-        return result.json();
-      })
-      .then(data =>
-        this.setState({
-          posts: data
-        })
-      );
-  }
+
   titleSet(event) {
     this.setState({ title: event.target.value });
   }
@@ -50,7 +39,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <nav className="navbar" style={{background:"transparent"}}>
+          <nav className="navbar" style={{ background: "transparent" }}>
             <div className="container-fluid">
               <div className="navbar-header">
                 <a className="navbar-brand" href="/">
@@ -87,11 +76,7 @@ class App extends Component {
           path="/"
           exact
           render={props => (
-            <HomePage
-              title={this.state.title}
-              body={this.state.body}
-              posts={this.state.posts}
-            />
+            <HomePage title={this.state.title} body={this.state.body} />
           )}
         />
         <Route path="/login" component={logIn} />
@@ -102,7 +87,6 @@ class App extends Component {
             <Post
               title={this.state.title}
               body={this.state.body}
-              posts={this.state.posts}
               comments={this.state.comments}
               commentCreate={this.state.commentCreate}
             />
@@ -121,8 +105,21 @@ class App extends Component {
           )}
         />
 
-
-        <div className="footer" style={{ position: "fixed", left: "0", bottom: "0", width: "100%", backgroundColor: "white", color: "black", textAlign: "center", lineHeight: "30px", fontSize: "xx-large" }} >Footer
+        <div
+          className="footer"
+          style={{
+            position: "fixed",
+            left: "0",
+            bottom: "0",
+            width: "100%",
+            backgroundColor: "white",
+            color: "black",
+            textAlign: "center",
+            lineHeight: "30px",
+            fontSize: "xx-large"
+          }}
+        >
+          Footer
         </div>
       </div>
     );
@@ -131,3 +128,5 @@ class App extends Component {
 
 export default App;
 
+//localhost://3001/breaddit/:postId
+//          :/post/Chase

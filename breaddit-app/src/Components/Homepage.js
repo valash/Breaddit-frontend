@@ -3,13 +3,31 @@ import { Link } from "react-router-dom";
 import "./HomePage.css";
 
 class Homepage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      posts: []
+    };
+  }
+  componentDidMount() {
+    fetch("http://localhost:3001/Breaddit")
+      .then(result => {
+        return result.json();
+      })
+      .then(data =>
+        this.setState({
+          posts: data
+        })
+      );
+  }
   render() {
-    const { posts } = this.props;
+    const { posts } = this.state;
     return (
       <div className="card-body" style={{ textAlign: "center" }}>
         <h1 style={{ marginTop: "30p" }}>BAKED BREAD</h1>
         <h3>
           {posts.map(post => (
+            // in backend the route is Breaddit/post.id
             <Link to={"/post/" + post.title}>
               <div
                 className="card-body"
@@ -27,7 +45,7 @@ class Homepage extends Component {
                   paddingTop: "50px",
                   fontSize: "70px"
                 }}
-                key={post.id}
+                key={post}
               >
                 <div className="card-body">{post.title}</div>
               </div>
