@@ -1,30 +1,63 @@
-import React, { Component } from "react";
-import Comment from "./Comment";
+import React, {Component} from 'react';
+import Comment from './Comment';
 
 class Post extends Component {
-  render() {
-    const { posts } = this.props;
-    return (
-      <div className="card" style={{borderRadius:"9px", border: "1px solid black"}}>
-        <div className="card-header bg-transparent border-success">HEADER</div>
-        <div className="card-body text-success">
+	constructor(props) {
+		super(props);
+		this.state = {
+			posts: []
+		};
+	}
+	render() {
+		return (
+			<div
+				className='card text-center'
+				style={{
+					width: '50%',
+					margin: 'auto',
+					marginTop: '10%'
+				}}>
+				<div className='card-body'>
+					{this.props.title}
+					{this.props.content}
 
-          <h5 className="card-title">{this.props.title} </h5>
-          <p className="card-text">{this.props.content}</p>
-      <div className="singlePost" key={posts.id}>
-        {/* {posts.map(post => (
-          <div key={posts.id}>{post.body}</div>
-        ))} */}
-        {/*how can I get data from the form to render here????? */}
-        <h2>{this.props.title} </h2>
-        <p>{this.props.content}</p>
-        <Comment />
-      </div>
-      <div className="card-footer ">Burn it  Butter It</div>
-      </div>
-      </div>
-    );
-  }
+					<Comment
+						comments={this.props.comments}
+						commentCreate={
+							this.props.commentCreate
+						}
+					/>
+					<div
+						className='card-footer text-muted'
+						style={{
+							textAlign: 'center',
+							background: 'none',
+							borderRadius: 'none',
+							height: '55px'
+						}}>
+						<p className='pull-left'>
+							<span
+								className='glyphicon glyphicon-thumbs-down'
+								style={{
+									margin: '9px'
+								}}
+							/>
+							Burn It
+						</p>
+						<p className='pull-right'>
+							<span
+								className='glyphicon glyphicon-thumbs-up'
+								style={{
+									margin: '9px'
+								}}
+							/>
+							Butter It
+						</p>
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default Post;
