@@ -63,7 +63,7 @@ class NewPost extends Component {
 							<input
 								type='text'
 								aria-label='Large'
-								placeholder='title'
+								placeholder='Rye hello there'
 								name={this.props.title}
 								onChange={this.titleSet}
 								style={{

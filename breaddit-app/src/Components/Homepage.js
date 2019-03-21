@@ -66,6 +66,37 @@ class Homepage extends Component {
 									}}>
 									{post.body}
 								</div>
+								<div
+									className='card-footer text-muted'
+									style={{
+										textAlign: 'center',
+										background: 'none',
+										borderRadius:
+											'none',
+										height: '55px',
+										border: 'none'
+									}}>
+									<p className='pull-left'>
+										<span
+											className='glyphicon glyphicon-thumbs-down'
+											style={{
+												margin:
+													'9px'
+											}}
+										/>
+										Burn It
+									</p>
+									<p className='pull-right'>
+										<span
+											className='glyphicon glyphicon-thumbs-up'
+											style={{
+												margin:
+													'9px'
+											}}
+										/>
+										Butter It
+									</p>
+								</div>
 							</div>
 						</Link>
 					))}
