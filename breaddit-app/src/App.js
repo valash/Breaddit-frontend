@@ -3,7 +3,7 @@ import {Route, Link} from 'react-router-dom';
 import './App.css';
 import Post from './Components/Post';
 import HomePage from './Components/Homepage';
-import NewPost2 from './Components/NewPost2';
+import NewPost from './Components/NewPost';
 import SignUp from './Components/SignUp';
 import logIn from './Components/logIn';
 import About from './Components/About';
@@ -124,7 +124,7 @@ class App extends Component {
 				<Route
 					path='/create'
 					render={(props) => (
-						<NewPost2
+						<NewPost
 							titleSet={this.titleSet}
 							bodySet={this.bodySet}
 							submission={this.submission}

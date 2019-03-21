@@ -4,32 +4,50 @@ import './NewPost.css';
 class NewPost extends Component {
 	constructor(props) {
 		super(props);
+
 		this.state = {
 			posts: []
 		};
-		this.titleSet = this.titleSet.bind(this);
-		this.bodySet = this.bodySet.bind(this);
-		this.submission = this.submission.bind(this);
+		this.addPost = this.addPost.bind(this);
+		// this.titleSet = this.titleSet.bind(this);
+		// this.bodySet = this.bodySet.bind(this);
+		// this.submission = this.submission.bind(this);
 	}
-	titleSet(event) {
-		this.setState({title: event.target.value});
+	addPost(e) {
+		if (this._inputElement.value !== ' ') {
+			var newPost = {
+				text: this._inputElement.value,
+				key: Date.now()
+			};
+			this.setState((prevState) => {
+				return {
+					posts: prevState.posts.concat(newPost)
+				};
+			});
+			this._inputElement.value = ' ';
+		}
+		console.log(this.state.posts);
+		e.preventDefault();
 	}
-	bodySet(event) {
-		this.setState({body: event.target.value});
-	}
-	submission(event) {
-		event.preventDefault();
-		console.log(
-			'your post is called ' + this.state.title
-		);
-		console.log(
-			'This is your post! ' + this.state.body
-		);
-		console.log(
-			'here are the comments: ' + this.state.comments
-		);
-		return this.state.title && this.state.body;
-	}
+	// titleSet(event) {
+	// 	this.setState({title: event.target.value});
+	// }
+	// bodySet(event) {
+	// 	this.setState({body: event.target.value});
+	// }
+	// submission(event) {
+	// 	event.preventDefault();
+	// 	console.log(
+	// 		'your post is called ' + this.state.title
+	// 	);
+	// 	console.log(
+	// 		'This is your post! ' + this.state.body
+	// 	);
+	// 	console.log(
+	// 		'here are the comments: ' + this.state.comments
+	// 	);
+	// 	return this.state.title && this.state.body;
+	// }
 	render() {
 		return (
 			<div className='newPost'>
@@ -46,11 +64,11 @@ class NewPost extends Component {
 							border: '0px'
 						}}>
 						<form
+							onSubmit={this.addPost}
 							style={{
 								height: '0',
 								textAlign: 'center'
-							}}
-							onSubmit={this.submission}>
+							}}>
 							<label
 								for='NewPost'
 								className='grey-text font-weight-light'
@@ -61,6 +79,9 @@ class NewPost extends Component {
 								}}
 							/>
 							<input
+								ref={(a) =>
+									(this._inputElement = a)
+								}
 								type='text'
 								aria-label='Large'
 								placeholder='rye hello there...'
@@ -111,13 +132,16 @@ class NewPost extends Component {
 								style={{
 									fontSize: 'x-large'
 								}}>
-								<input
-									type='submit'
-									value='Submit'
-								/>
+								<button type='submit'>
+									Submit
+								</button>
 							</div>
 						</form>
 					</div>
+					<NewPostItems
+						entries={this.state.posts}
+						delete={this.deletePost}
+					/>
 				</div>
 			</div>
 		);
