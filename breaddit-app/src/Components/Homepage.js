@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import './HomePage.css';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./HomePage.css";
 
 class Homepage extends Component {
+
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -104,6 +105,7 @@ class Homepage extends Component {
 			</div>
 		);
 	}
+
 }
 
 export default Homepage;
