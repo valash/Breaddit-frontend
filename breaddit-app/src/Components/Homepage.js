@@ -32,7 +32,7 @@ class Homepage extends Component {
 					style={{
 						marginTop: '30p'
 					}}>
-					BAKED BREAD
+					B R E A D I T T
 				</h1>
 				<h3>
 					{posts.map((post) => (
