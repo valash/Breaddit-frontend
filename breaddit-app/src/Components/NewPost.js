@@ -96,8 +96,8 @@ class NewPost extends Component {
                   boxShadow:
                     "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
                   border: "none",
-                  textAlign: "center",
-                  margin: "12px"
+                  textAlign: "center"
+                  //   margin: "12px"
                 }}
               />
               <div

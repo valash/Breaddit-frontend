@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
+import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 import Post from "./Components/Post";
 // import HomePage from "./Components/Homepage";
@@ -57,7 +57,7 @@ class App extends Component {
           >
             <div className="container-fluid">
               <div className="navbar-header">
-                <a className="navbar-brand" href="/">
+                <Link to="/" className="navbar-brand">
                   <img
                     src={require("./images/logo.png")}
                     alt="reddit bread"
@@ -65,17 +65,17 @@ class App extends Component {
                       height: "40px"
                     }}
                   />
-                </a>
+                </Link>
               </div>
               <ul className="nav navbar-nav">
                 <li>
-                  <a href="/">Home</a>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <a href="/create">New Toast</a>
+                  <Link to="/create">New Toast</Link>
                 </li>
                 <li>
-                  <a href="/about">About</a>
+                  <Link to="/about">About</Link>
                 </li>
               </ul>
               <ul className="nav navbar-nav navbar-right">
@@ -152,34 +152,36 @@ class App extends Component {
               posts={this.state.posts}
             />
           )}
-        /> */}
-        <Route path="/login" component={logIn} />
-        <Route path="/signup" component={SignUp} />
-        <Route
-          path="/post/:name"
-          render={props => (
-            <Post
-              {...props}
-              //   title={this.state.title}
-              //   body={this.state.body}
-              comments={this.state.comments}
-              commentCreate={this.state.commentCreate}
-            />
-          )}
-        />
-        <Route
-          path="/create"
-          render={props => (
-            <NewPost
-              titleSet={this.titleSet}
-              bodySet={this.bodySet}
-              submission={this.submission}
-              title={this.state.title}
-              body={this.state.body}
-            />
-          )}
-        />
-        <Route path="/about" component={About} />
+		/> */}
+        <Switch>
+          <Route exact path="/login" component={logIn} />
+          <Route exact path="/signup" component={SignUp} />
+          <Route
+            exact
+            path="/create"
+            render={props => (
+              <NewPost
+                titleSet={this.titleSet}
+                bodySet={this.bodySet}
+                submission={this.submission}
+                title={this.state.title}
+                body={this.state.body}
+              />
+            )}
+          />
+          <Route exact path="/about" component={About} />
+          <Route
+            exact
+            path="/post/:name"
+            render={props => (
+              <Post
+                {...props}
+                comments={this.state.comments}
+                commentCreate={this.state.commentCreate}
+              />
+            )}
+          />
+        </Switch>
       </div>
     );
   }
