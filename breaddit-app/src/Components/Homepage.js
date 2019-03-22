@@ -4,7 +4,7 @@ import "./HomePage.css";
 
 class Homepage extends Component {
   render() {
-    const { posts } = this.props;
+    const { posts } = this.state;
     return (
       <div className="card-body" style={{ textAlign: "center" }}>
         <h1

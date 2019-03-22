@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Post from "./Components/Post";
-import HomePage from "./Components/Homepage";
+// import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
 import SignUp from "./Components/SignUp";
 import logIn from "./Components/logIn";
@@ -32,8 +32,6 @@ class App extends Component {
     event.preventDefault();
     console.log("your post is called " + this.state.title);
     console.log("This is your post! " + this.state.body);
-    console.log("here are the comments: " + this.state.comments);
-    return this.state.title && this.state.body;
   }
   componentDidMount() {
     fetch("https://breaddit123.herokuapp.com/breaddit")
@@ -46,8 +44,8 @@ class App extends Component {
         })
       );
   }
-
   render() {
+    const { posts } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -95,7 +93,56 @@ class App extends Component {
             </div>
           </nav>
         </header>
-        <Route
+        <div className="card-body" style={{ textAlign: "center" }}>
+          <h1
+            style={{
+              marginTop: "30p"
+            }}
+          >
+            BAKED BREAD
+          </h1>
+          <h3>
+            {posts.map(post => (
+              // in backend the route is Breaddit/post.id
+              <Link to={"/post/" + post.title}>
+                <div
+                  className="card-body"
+                  style={{
+                    borderRadius: "1px",
+                    boxShadow:
+                      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19",
+                    textAlign: "center",
+                    width: "60%",
+                    marginTop: "40px",
+                    marginLeft: "20%",
+                    backgroundColor: " rgba(255, 255, 255, 0.6)"
+                  }}
+                  key={post}
+                >
+                  <div
+                    className="card-header"
+                    style={{
+                      textAlign: "-webkit-left"
+                    }}
+                  >
+                    {post.title}
+                  </div>
+                  <div
+                    className="card-body"
+                    style={{
+                      height: "50px",
+                      margin: "12px"
+                    }}
+                  >
+                    {post.body}
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </h3>
+        </div>
+        );
+        {/* <Route
           path="/"
           exact
           render={props => (
@@ -105,15 +152,16 @@ class App extends Component {
               posts={this.state.posts}
             />
           )}
-        />
+        /> */}
         <Route path="/login" component={logIn} />
         <Route path="/signup" component={SignUp} />
         <Route
           path="/post/:name"
           render={props => (
             <Post
-              title={this.state.title}
-              body={this.state.body}
+              {...props}
+              //   title={this.state.title}
+              //   body={this.state.body}
               comments={this.state.comments}
               commentCreate={this.state.commentCreate}
             />
