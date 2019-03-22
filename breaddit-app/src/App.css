@@ -1,31 +1,32 @@
 * {
-  text-decoration: none;
-  font-family: "Montserrat", sans-serif;
+	text-decoration: none;
+	font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
-  margin-top: 0px;
-  display: contents;
-  font-size: 55px;
-  flex-direction: row;
+	margin-top: 0px;
+	display: contents;
+	font-size: 55px;
+	flex-direction: row;
 }
 
 a:link,
 a:visited,
 a:hover,
 a:active {
-  color: black;
-  text-decoration: none;
-  font-size: 20px;
+	color: black;
+	text-decoration: none;
+	font-size: 20px;
 }
 
 a:-webkit-any-link {
-  text-decoration: none;
+	text-decoration: none;
 }
 html {
-  background: url(images/whalething.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	background: url(images/whalething.jpg) no-repeat center
+		center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
