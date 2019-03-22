@@ -8,7 +8,6 @@ class Post extends Component {
   }
   componentDidMount() {
     const postId = this.props.match.params._id;
-    // console.log(this.props.match.params);
     fetch(`https://breaddit123.herokuapp.com/breaddit/${postId}`)
       .then(result => {
         return result.json();
@@ -22,7 +21,6 @@ class Post extends Component {
   deleteIt(_id) {
     const postId = this.props.match.params._id;
     console.log("Bye bye!");
-    // event.preventDefault();
     fetch(`https://breaddit123.herokuapp.com/breaddit/${postId}`, {
       method: "DELETE"
     }).then(res => res);
@@ -46,7 +44,7 @@ class Post extends Component {
             backgroundColor: "rgb(255,255,255, 0.6)"
           }}
         >
-          {this.props.title}
+          {this.props.state}
           {this.props.body}
 
           <Comment

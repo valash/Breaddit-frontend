@@ -12,8 +12,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: " ",
-      body: " ",
+      title: "",
+      body: "",
       posts: []
     };
     this.titleSet = this.titleSet.bind(this);
@@ -33,7 +33,6 @@ class App extends Component {
     console.log("your post is called " + this.state.title);
     console.log("This is your post! " + this.state.body);
     console.log("here are the comments: " + this.state.comments);
-    return this.state.title && this.state.body;
   }
   componentDidMount() {
     fetch("https://breaddit123.herokuapp.com/breaddit")
