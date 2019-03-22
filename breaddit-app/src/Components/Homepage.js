@@ -14,9 +14,12 @@ class Homepage extends Component {
         return result.json();
       })
       .then(data =>
-        this.setState({
-          posts: data
-        })
+        this.setState(
+          {
+            posts: data
+          },
+          () => console.log(this.state)
+        )
       );
   }
   render() {
@@ -32,7 +35,7 @@ class Homepage extends Component {
         </h1>
         <h3>
           {posts.map(post => (
-            <Link to={"/post/" + post.title}>
+            <Link to={"/post/" + post._id}>
               <div
                 className="card-body"
                 style={{

@@ -2,6 +2,21 @@ import React, { Component } from "react";
 import Comment from "./Comment";
 
 class Post extends Component {
+  componentDidMount() {
+    console.log(this.props.match.params);
+    const postId = this.props.match.params._id;
+    fetch(`https://breaddit123.herokuapp.com/breaddit/${postId}`)
+      .then(result => {
+        return result.json();
+      })
+      .then(
+        data => console.log(data)
+        // this.setState({
+        //   posts: data
+        // })
+      );
+  }
+
   render() {
     return (
       <div

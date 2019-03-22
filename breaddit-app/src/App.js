@@ -109,9 +109,10 @@ class App extends Component {
         <Route path="/login" component={logIn} />
         <Route path="/signup" component={SignUp} />
         <Route
-          path="/post/:name"
+          path="/post/:_id"
           render={props => (
             <Post
+              {...props}
               title={this.state.title}
               body={this.state.body}
               comments={this.state.comments}
@@ -121,16 +122,16 @@ class App extends Component {
         />
         <Route
           path="/create"
-          render={props => (
-            <NewPost
-              titleSet={this.titleSet}
-              bodySet={this.bodySet}
-              submission={this.submission}
-              title={this.state.title}
-              body={this.state.body}
-            />
-          )}
+          component={NewPost}
+          //   render={props => (
+          //     <NewPost
+          //       titleSet={this.titleSet}
+          //       bodySet={this.bodySet}
+          //       submission={this.submission}
+          //       title={this.state.title}
+          //       body={this.state.body}
         />
+        )} />
         <Route path="/about" component={About} />
       </div>
     );
@@ -138,6 +139,3 @@ class App extends Component {
 }
 
 export default App;
-
-//localhost://3001/breaddit/:postId
-//          :/post/Chase
