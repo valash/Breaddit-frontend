@@ -76,7 +76,7 @@ class App extends Component {
                   <a href="/create">New Toast</a>
                 </li>
                 <li>
-                  <a href="/about">About</a>
+                  <a href="/about">About the Bakers</a>
                 </li>
               </ul>
               <ul className="nav navbar-nav navbar-right">

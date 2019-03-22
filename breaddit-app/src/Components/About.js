@@ -13,7 +13,13 @@ class About extends Component {
 					textAlign: 'center',
 					marginTop: '18%'
 				}}>
-				<div className='card'>
+				<div
+					className='card'
+					style={{
+						border: 'none',
+						background:
+							'rgba(255, 255, 255, 0.8)'
+					}}>
 					<img
 						className='card-img-top'
 						src={Alsia}
@@ -36,7 +42,13 @@ class About extends Component {
 						</p>
 					</div>
 				</div>
-				<div className='card'>
+				<div
+					className='card'
+					style={{
+						border: 'none',
+						background:
+							'rgba(255, 255, 255, 0.8)'
+					}}>
 					<img
 						className='card-img-top'
 						src={Chase}
@@ -59,7 +71,14 @@ class About extends Component {
 						</p>
 					</div>
 				</div>
-				<div className='card'>
+				<div
+					className='card'
+					style={{
+						border: 'none',
+						background:
+							'rgba(255, 255, 255, 0.8)'
+					}}>
+					>
 					<img
 						className='card-img-top'
 						src={VA}
@@ -82,7 +101,14 @@ class About extends Component {
 						</p>
 					</div>
 				</div>
-				<div className='card'>
+				<div
+					className='card'
+					style={{
+						border: 'none',
+						background:
+							'rgba(255, 255, 255, 0.8)'
+					}}>
+					>
 					<img
 						className='card-img-top'
 						src={Joey}
