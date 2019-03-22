@@ -75,14 +75,15 @@ class NewPost extends Component {
                 value={this.state.title}
                 onChange={this.titleSet}
                 style={{
-                  margin: "auto",
-                  width: "600px",
+                  margin: "70px auto auto auto",
+                  width: "50%",
                   fontSize: "30px",
                   borderRadius: "5px",
                   border: "none",
                   boxShadow:
                     "0 4px 34px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19",
-                  textAlign: "center"
+                  textAlign: "center",
+                  backgroundColor: "rgb(255,255,255, 0.6)"
                 }}
               />
               <label
@@ -90,7 +91,8 @@ class NewPost extends Component {
                 style={{
                   display: "block",
                   fontSize: "30px",
-                  borderRadius: "5px"
+                  borderRadius: "5px",
+                  backgroundColor: "rgb(255,255,255, 0.6)"
                 }}
               />
               <textarea
@@ -99,25 +101,38 @@ class NewPost extends Component {
                 value={this.state.body}
                 onChange={this.bodySet}
                 style={{
-                  margin: "80px 541.441px 0px 566.128px",
+                  margin: "70px auto auto auto",
                   display: "block",
-                  fontSize: "55px",
-                  width: "600px",
+                  fontSize: "40px",
+                  width: "50%",
                   height: "21rem",
                   borderRadius: "10px",
                   boxShadow:
                     "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
                   border: "none",
-                  textAlign: "center"
+                  textAlign: "center",
+                  backgroundColor: "rgb(255,255,255, 0.6)"
                 }}
               />
               <div
                 className="submit"
                 style={{
-                  fontSize: "x-large"
+                  fontSize: "x-large",
+                  marginTop: "10px"
                 }}
               >
-                <input type="submit" value="Submit" />
+                <input
+                  type="submit"
+                  value="Submit"
+                  style={{
+                    backgroundColor: "rgb(255,255,255, 0.6)",
+                    border: "none",
+                    borderRadius: "6px",
+                    boxShadow:
+                      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+                    color: "rgb(98,98,98)"
+                  }}
+                />
               </div>
             </form>
           </div>

@@ -21,7 +21,9 @@ class About extends Component {
 						style={{
 							height: '180px',
 							width: '267px:',
-							marginLeft: 'auto'
+							marginLeft: 'auto',
+							backgroundColor:
+								'rgba(255,255,255, 0.6)'
 						}}
 					/>
 					<div className='card-body'>
@@ -29,12 +31,8 @@ class About extends Component {
 							Alsia
 						</h5>
 						<p className='card-text'>
-							This is a wider card with
-							supporting text below as a
-							natural lead-in to additional
-							content. This card has even
-							longer content than the first to
-							show that equal height action.
+							The beauty and brains behind the
+							frontend!
 						</p>
 					</div>
 				</div>
@@ -46,7 +44,9 @@ class About extends Component {
 						style={{
 							height: '180px',
 							width: '267px:',
-							marginLeft: 'auto'
+							marginLeft: 'auto',
+							backgroundColor:
+								'rgba(255,255,255, 0.6)'
 						}}
 					/>
 					<div className='card-body'>
@@ -54,12 +54,8 @@ class About extends Component {
 							Chase
 						</h5>
 						<p className='card-text'>
-							This is a wider card with
-							supporting text below as a
-							natural lead-in to additional
-							content. This card has even
-							longer content than the first to
-							show that equal height action.
+							The taskmasker and meme
+							refrencer
 						</p>
 					</div>
 				</div>
@@ -71,7 +67,9 @@ class About extends Component {
 						style={{
 							height: '180px',
 							width: '267px:',
-							marginLeft: 'auto'
+							marginLeft: 'auto',
+							backgroundColor:
+								'rgba(255,255,255, 0.6)'
 						}}
 					/>
 					<div className='card-body'>
@@ -79,12 +77,8 @@ class About extends Component {
 							Virginia
 						</h5>
 						<p className='card-text'>
-							This is a wider card with
-							supporting text below as a
-							natural lead-in to additional
-							content. This card has even
-							longer content than the first to
-							show that equal height action.
+							The provider of snacks and
+							stylin'
 						</p>
 					</div>
 				</div>
@@ -96,18 +90,16 @@ class About extends Component {
 						style={{
 							height: '180px',
 							width: '267px:',
-							marginLeft: 'auto'
+							marginLeft: 'auto',
+							backgroundColor:
+								'rgba(255,255,255, 0.6)'
 						}}
 					/>
 					<div className='card-body'>
 						<h5 className='card-title'>Joey</h5>
 						<p className='card-text'>
-							This is a wider card with
-							supporting text below as a
-							natural lead-in to additional
-							content. This card has even
-							longer content than the first to
-							show that equal height action.
+							the backend brawn- killing the
+							game!
 						</p>
 					</div>
 				</div>
