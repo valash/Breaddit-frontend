@@ -5,8 +5,10 @@
 ### Description
 
 Breaddit is a Reddit clone for all of your bread-themed needs.
-What your project is / should be used for
-What problem(s) your projects solves
+
+Breaddit is a social news website to keep you up-to-date on all things loaf, bread puns? We got em. International Bread Scandals? ✅. Bready-to-make recipes? You know it!
+
+In today's climate, everything is too focused on politics, money, Millennials, and we saw a very LARGE problem in our society. There was nowhere to go for people to share bread things to their little sourdough heart's desire. Breaddit is here to change that.
 
 ### Brief Example
 
@@ -30,6 +32,6 @@ This is particularly important when it comes to recruiters scanning your project
 
 Good links to include are:
 
-- [Deployed App](http://breaddit.surge.sh/)
-- [Front-End Repo](https://github.com/valash/Breaddit-frontend)
-- [Front-End Issue Tracker](https://github.com/valash/Breaddit-frontend/issues)
+-   [Deployed App](http://breaddit.surge.sh/)
+-   [Front-End Repo](https://github.com/valash/Breaddit-frontend)
+-   [Front-End Issue Tracker](https://github.com/valash/Breaddit-frontend/issues)

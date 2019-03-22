@@ -24,7 +24,8 @@ class logIn extends Component {
 							className='whole-signup'
 							style={{
 								fontSize:
-									'-webkit-xxx-large'
+									'-webkit-xxx-large',
+								margin: 'auto'
 							}}>
 							<div className='email'>
 								<label
