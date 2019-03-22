@@ -21,7 +21,9 @@ class About extends Component {
 						style={{
 							height: '180px',
 							width: '267px:',
-							marginLeft: 'auto'
+							marginLeft: 'auto',
+							backgroundColor:
+								'rgba(255,255,255, 0.6)'
 						}}
 					/>
 					<div className='card-body'>
@@ -42,7 +44,9 @@ class About extends Component {
 						style={{
 							height: '180px',
 							width: '267px:',
-							marginLeft: 'auto'
+							marginLeft: 'auto',
+							backgroundColor:
+								'rgba(255,255,255, 0.6)'
 						}}
 					/>
 					<div className='card-body'>
@@ -63,7 +67,9 @@ class About extends Component {
 						style={{
 							height: '180px',
 							width: '267px:',
-							marginLeft: 'auto'
+							marginLeft: 'auto',
+							backgroundColor:
+								'rgba(255,255,255, 0.6)'
 						}}
 					/>
 					<div className='card-body'>
@@ -84,7 +90,9 @@ class About extends Component {
 						style={{
 							height: '180px',
 							width: '267px:',
-							marginLeft: 'auto'
+							marginLeft: 'auto',
+							backgroundColor:
+								'rgba(255,255,255, 0.6)'
 						}}
 					/>
 					<div className='card-body'>

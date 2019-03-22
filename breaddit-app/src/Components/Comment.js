@@ -35,7 +35,7 @@ class Comment extends Component {
 					className='card-title'
 					style={{
 						fontSize: 'xx-large',
-						marginTop: '50px'
+						margin: '50px auto 50px'
 					}}>
 					I am from the Comment Component!
 				</div>
@@ -43,7 +43,11 @@ class Comment extends Component {
 					className='makeComment'
 					onSubmit={this.handleSubmit}
 					style={{
-						display: 'grid'
+						display: 'grid',
+						borderRadius: '5px',
+						textAlign: 'center',
+						width: '100%',
+						margin: 'auto'
 					}}>
 					<textarea
 						placeholder='comment'
@@ -51,11 +55,13 @@ class Comment extends Component {
 						onChange={this.commentCreate}
 						value={this.state.comments}
 						style={{
+							marginTop: '10px',
 							height: '100px',
-							marginBottom: '10px'
+							outline: 'none',
+							resize: 'none'
 						}}
 					/>
-					<input
+					{/* <input
 						type='submit'
 						value='Add Comment'
 						onClick={this.addComment}
@@ -66,8 +72,19 @@ class Comment extends Component {
 							borderRadius: '6px',
 							border: '0.8px solid grey'
 						}}
-					/>
+					/> */}
 				</form>
+				<input
+					type='submit'
+					value='Add Comment'
+					onClick={this.addComment}
+					style={{
+						width: 'fit-content',
+						margin: '21px auto 15px',
+						borderRadius: '6px',
+						border: '0.8px solid grey'
+					}}
+				/>
 				<p>New comments should appear here:</p>
 				{this.state.comments}
 			</div>

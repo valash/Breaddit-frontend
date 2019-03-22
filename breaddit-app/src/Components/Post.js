@@ -26,9 +26,15 @@ class Post extends Component {
 				style={{
 					width: '50%',
 					margin: 'auto',
-					marginTop: '10%'
+					marginTop: '10%',
+					border: 'none'
 				}}>
-				<div className='card-body'>
+				<div
+					className='card-body'
+					style={{
+						backgroundColor:
+							'rgb(255,255,255, 0.6)'
+					}}>
 					{this.props.title}
 					{this.props.body}
 
