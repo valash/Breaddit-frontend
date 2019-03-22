@@ -21,8 +21,6 @@ class NewPost extends Component {
     event.preventDefault();
     console.log("your post is called " + this.state.title);
     console.log("This is your post! " + this.state.body);
-    // console.log("here are the comments: " + this.state.comments);
-    // return this.state.title && this.state.body;
 
     const payload = {
       title: this.state.title,
@@ -62,7 +60,6 @@ class NewPost extends Component {
               onSubmit={this.submission}
             >
               <label
-                // for="NewPost"
                 className="grey-text font-weight-light"
                 style={{
                   display: "block",
@@ -88,7 +85,6 @@ class NewPost extends Component {
                 }}
               />
               <label
-                // for="postBody"
                 className="grey-text font-weight-light"
                 style={{
                   display: "block",
@@ -112,7 +108,6 @@ class NewPost extends Component {
                     "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
                   border: "none",
                   textAlign: "center"
-                  // margin: "12px"
                 }}
               />
               <div
