@@ -62,7 +62,7 @@ class NewPost extends Component {
               onSubmit={this.submission}
             >
               <label
-                for="NewPost"
+                // for="NewPost"
                 className="grey-text font-weight-light"
                 style={{
                   display: "block",
@@ -88,7 +88,7 @@ class NewPost extends Component {
                 }}
               />
               <label
-                for="postBody"
+                // for="postBody"
                 className="grey-text font-weight-light"
                 style={{
                   display: "block",
@@ -102,8 +102,8 @@ class NewPost extends Component {
                 value={this.state.body}
                 onChange={this.bodySet}
                 style={{
-                  margin: "80px 541.441px 0px 566.128px;",
-                  display: "block;",
+                  margin: "80px 541.441px 0px 566.128px",
+                  display: "block",
                   fontSize: "55px",
                   width: "600px",
                   height: "21rem",

@@ -131,7 +131,6 @@ class App extends Component {
           //       title={this.state.title}
           //       body={this.state.body}
         />
-        )} />
         <Route path="/about" component={About} />
       </div>
     );

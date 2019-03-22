@@ -29,7 +29,7 @@ class Post extends Component {
       >
         <div className="card-body">
           {this.props.title}
-          {this.props.content}
+          {this.props.body}
 
           <Comment
             comments={this.props.comments}
