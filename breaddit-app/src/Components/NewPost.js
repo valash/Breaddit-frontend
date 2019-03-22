@@ -4,7 +4,8 @@ class NewPost extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      posts: []
+      title: "",
+      body: ""
     };
     this.titleSet = this.titleSet.bind(this);
     this.bodySet = this.bodySet.bind(this);
@@ -20,8 +21,21 @@ class NewPost extends Component {
     event.preventDefault();
     console.log("your post is called " + this.state.title);
     console.log("This is your post! " + this.state.body);
-    console.log("here are the comments: " + this.state.comments);
-    return this.state.title && this.state.body;
+    // console.log("here are the comments: " + this.state.comments);
+    // return this.state.title && this.state.body;
+
+    const payload = {
+      title: this.state.title,
+      body: this.state.body
+    };
+
+    fetch("https://breaddit123.herokuapp.com/breaddit/", {
+      method: "POST",
+      body: JSON.stringify(payload)
+    })
+      .then(res => res.json())
+      .then(res => console.log(res));
+    // instead of console.log, use this.props.history.push to redirect to the post with the returned _id
   }
   render() {
     return (
@@ -48,7 +62,7 @@ class NewPost extends Component {
               onSubmit={this.submission}
             >
               <label
-                for="NewPost"
+                // for="NewPost"
                 className="grey-text font-weight-light"
                 style={{
                   display: "block",
@@ -60,7 +74,7 @@ class NewPost extends Component {
                 type="text"
                 aria-label="Large"
                 placeholder="Rye hello there"
-                name={this.props.title}
+                value={this.state.title}
                 onChange={this.titleSet}
                 style={{
                   margin: "auto",
@@ -74,7 +88,7 @@ class NewPost extends Component {
                 }}
               />
               <label
-                for="postBody"
+                // for="postBody"
                 className="grey-text font-weight-light"
                 style={{
                   display: "block",
@@ -85,11 +99,11 @@ class NewPost extends Component {
               <textarea
                 rows="30"
                 placeholder="We're BREAD-y for your message"
-                name={this.props.body}
+                value={this.state.body}
                 onChange={this.bodySet}
                 style={{
-                  margin: "80px 541.441px 0px 566.128px;",
-                  display: "block;",
+                  margin: "80px 541.441px 0px 566.128px",
+                  display: "block",
                   fontSize: "55px",
                   width: "600px",
                   height: "21rem",
@@ -97,8 +111,8 @@ class NewPost extends Component {
                   boxShadow:
                     "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
                   border: "none",
-                  textAlign: "center",
-                  margin: "12px"
+                  textAlign: "center"
+                  // margin: "12px"
                 }}
               />
               <div
