@@ -72,7 +72,7 @@ class Post extends Component {
               />
               Butter It
             </p>
-            <input type="button" value="Delete" onClick={this.deleteIt} />
+            <input type="button" value="Delete Post" onClick={this.deleteIt} />
           </div>
         </div>
       </div>
