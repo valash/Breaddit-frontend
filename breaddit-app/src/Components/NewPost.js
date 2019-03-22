@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import './NewPost.css';
+import NewPostItems from './NewPostItems';
 
 class NewPost extends Component {
 	constructor(props) {
