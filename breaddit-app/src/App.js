@@ -100,6 +100,7 @@ class App extends Component {
           exact
           render={props => (
             <HomePage
+              {...props}
               title={this.state.title}
               body={this.state.body}
               posts={this.state.posts}
@@ -120,17 +121,7 @@ class App extends Component {
             />
           )}
         />
-        <Route
-          path="/create"
-          component={NewPost}
-          //   render={props => (
-          //     <NewPost
-          //       titleSet={this.titleSet}
-          //       bodySet={this.bodySet}
-          //       submission={this.submission}
-          //       title={this.state.title}
-          //       body={this.state.body}
-        />
+        <Route path="/create" component={NewPost} />
         <Route path="/about" component={About} />
       </div>
     );

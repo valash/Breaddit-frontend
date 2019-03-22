@@ -32,7 +32,8 @@ class NewPost extends Component {
       body: JSON.stringify(payload)
     })
       .then(res => res.json())
-      .then(res => console.log(res));
+      .then(res => this.props.history.push(payload));
+    // console.log(res));
     // instead of console.log, use this.props.history.push to redirect to the post with the returned _id
   }
   render() {
