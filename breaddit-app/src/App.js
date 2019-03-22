@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Link, Switch } from "react-router-dom";
 import "./App.css";
 import Post from "./Components/Post";
-// import HomePage from "./Components/Homepage";
+import HomePage from "./Components/Homepage";
 import NewPost from "./Components/NewPost";
 import SignUp from "./Components/SignUp";
 import logIn from "./Components/logIn";
@@ -45,7 +45,6 @@ class App extends Component {
       );
   }
   render() {
-    const { posts } = this.state;
     return (
       <div className="App">
         <header className="App-header">
@@ -93,56 +92,7 @@ class App extends Component {
             </div>
           </nav>
         </header>
-        <div className="card-body" style={{ textAlign: "center" }}>
-          <h1
-            style={{
-              marginTop: "30p"
-            }}
-          >
-            BAKED BREAD
-          </h1>
-          <h3>
-            {posts.map(post => (
-              // in backend the route is Breaddit/post.id
-              <Link to={"/post/" + post.title}>
-                <div
-                  className="card-body"
-                  style={{
-                    borderRadius: "1px",
-                    boxShadow:
-                      "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19",
-                    textAlign: "center",
-                    width: "60%",
-                    marginTop: "40px",
-                    marginLeft: "20%",
-                    backgroundColor: " rgba(255, 255, 255, 0.6)"
-                  }}
-                  key={post}
-                >
-                  <div
-                    className="card-header"
-                    style={{
-                      textAlign: "-webkit-left"
-                    }}
-                  >
-                    {post.title}
-                  </div>
-                  <div
-                    className="card-body"
-                    style={{
-                      height: "50px",
-                      margin: "12px"
-                    }}
-                  >
-                    {post.body}
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </h3>
-        </div>
-        );
-        {/* <Route
+        <Route
           path="/"
           exact
           render={props => (
@@ -152,36 +102,34 @@ class App extends Component {
               posts={this.state.posts}
             />
           )}
-		/> */}
-        <Switch>
-          <Route exact path="/login" component={logIn} />
-          <Route exact path="/signup" component={SignUp} />
-          <Route
-            exact
-            path="/create"
-            render={props => (
-              <NewPost
-                titleSet={this.titleSet}
-                bodySet={this.bodySet}
-                submission={this.submission}
-                title={this.state.title}
-                body={this.state.body}
-              />
-            )}
-          />
-          <Route exact path="/about" component={About} />
-          <Route
-            exact
-            path="/post/:name"
-            render={props => (
-              <Post
-                {...props}
-                comments={this.state.comments}
-                commentCreate={this.state.commentCreate}
-              />
-            )}
-          />
-        </Switch>
+        />
+        <Route exact path="/login" component={logIn} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route
+          exact
+          path="/create"
+          render={props => (
+            <NewPost
+              titleSet={this.titleSet}
+              bodySet={this.bodySet}
+              submission={this.submission}
+              title={this.state.title}
+              body={this.state.body}
+            />
+          )}
+        />
+        <Route exact path="/about" component={About} />
+        <Route
+          exact
+          path="/post/:name"
+          render={props => (
+            <Post
+              {...props}
+              comments={this.state.comments}
+              commentCreate={this.state.commentCreate}
+            />
+          )}
+        />
       </div>
     );
   }
