@@ -21,6 +21,8 @@ class NewPost extends Component {
     event.preventDefault();
     console.log("your post is called " + this.state.title);
     console.log("This is your post! " + this.state.body);
+    console.log("here are the comments: " + this.state.comments);
+    return this.state.title && this.state.body;
   }
   render() {
     return (
@@ -58,8 +60,8 @@ class NewPost extends Component {
               <input
                 type="text"
                 aria-label="Large"
-                placeholder="title"
-                name={this.state.title}
+                placeholder="Rye hello there"
+                name={this.props.title}
                 onChange={this.titleSet}
                 style={{
                   margin: "auto",
@@ -84,7 +86,7 @@ class NewPost extends Component {
               <textarea
                 rows="30"
                 placeholder="We're BREAD-y for your message"
-                name={this.state.body}
+                name={this.props.body}
                 onChange={this.bodySet}
                 style={{
                   margin: "80px 541.441px 0px 566.128px;",
@@ -96,8 +98,8 @@ class NewPost extends Component {
                   boxShadow:
                     "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
                   border: "none",
-                  textAlign: "center"
-                  //   margin: "12px"
+                  textAlign: "center",
+                  margin: "12px"
                 }}
               />
               <div
