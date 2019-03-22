@@ -26,6 +26,8 @@ class Post extends Component {
     fetch(`https://breaddit123.herokuapp.com/breaddit/${postId}`, {
       method: "DELETE"
     }).then(res => res);
+    let path = `/`;
+    this.props.history.push(path);
   }
   render() {
     return (

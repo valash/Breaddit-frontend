@@ -21,6 +21,8 @@ class NewPost extends Component {
     event.preventDefault();
     console.log("your post is called " + this.state.title);
     console.log("This is your post! " + this.state.body);
+    let path = `/`;
+    this.props.history.push(path);
 
     const payload = {
       title: this.state.title,
@@ -32,7 +34,7 @@ class NewPost extends Component {
       body: JSON.stringify(payload)
     })
       .then(res => res.json())
-      .then(res => this.props.history.push(payload));
+      .then(() => this.props.history.push(payload));
     // console.log(res));
     // instead of console.log, use this.props.history.push to redirect to the post with the returned _id
   }
